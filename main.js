@@ -31,3 +31,15 @@ document.querySelectorAll('.card, .section-header, .about-grid, .contact-title')
   el.style.transition = 'opacity .8s ease, transform .8s cubic-bezier(.2,.7,.3,1)';
   io.observe(el);
 });
+
+// filter: 체험 가능한 것들만 보기
+const filterBtn = document.querySelector('.filter-toggle');
+const worksGrid = document.querySelector('.grid');
+if (filterBtn && worksGrid) {
+  filterBtn.addEventListener('click', () => {
+    const pressed = filterBtn.getAttribute('aria-pressed') === 'true';
+    const next = !pressed;
+    filterBtn.setAttribute('aria-pressed', String(next));
+    worksGrid.classList.toggle('filter-playable', next);
+  });
+}
