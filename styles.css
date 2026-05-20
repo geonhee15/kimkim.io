@@ -73,19 +73,17 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   width: 100%; height: 100%;
   object-fit: cover;
   object-position: center;
-  filter: grayscale(55%) brightness(0.14) contrast(1.25) saturate(0.6);
+  filter: grayscale(25%) brightness(0.55) contrast(1.05) saturate(0.85);
 }
 .hero-bg-vignette {
   position: absolute; inset: 0;
   background:
-    /* strong radial vignette: clear-ish center → black edges */
-    radial-gradient(ellipse 75% 75% at 50% 45%, rgba(10,10,12,0.15) 0%, rgba(10,10,12,0.65) 55%, rgba(10,10,12,0.95) 85%, #0a0a0c 100%),
+    /* softer radial vignette: clear center → dark edges */
+    radial-gradient(ellipse 85% 80% at 50% 45%, transparent 0%, rgba(10,10,12,0.35) 60%, rgba(10,10,12,0.75) 90%, #0a0a0c 100%),
     /* bottom fade so works section blends in */
-    linear-gradient(180deg, transparent 0%, transparent 45%, rgba(10,10,12,0.6) 70%, rgba(10,10,12,0.95) 88%, #0a0a0c 100%),
+    linear-gradient(180deg, transparent 0%, transparent 55%, rgba(10,10,12,0.5) 78%, rgba(10,10,12,0.92) 92%, #0a0a0c 100%),
     /* brand color tint */
-    linear-gradient(135deg, rgba(168,85,247,0.20) 0%, transparent 40%, rgba(56,189,248,0.14) 100%),
-    /* global darken */
-    linear-gradient(0deg, rgba(10,10,12,0.35), rgba(10,10,12,0.35));
+    linear-gradient(135deg, rgba(168,85,247,0.14) 0%, transparent 45%, rgba(56,189,248,0.08) 100%);
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
