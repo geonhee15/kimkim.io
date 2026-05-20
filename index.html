@@ -25,10 +25,26 @@
     <span class="logo-mark">◆</span>
     <span class="logo-text">kimkim.io</span>
   </a>
-  <div class="nav-links">
-    <a href="#works">Works</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
+  <div class="nav-right">
+    <div class="nav-links">
+      <a href="#works" data-i18n="nav.works">Works</a>
+      <a href="#about" data-i18n="nav.about">About</a>
+      <a href="#contact" data-i18n="nav.contact">Contact</a>
+    </div>
+    <div class="lang-switcher">
+      <button class="lang-btn" type="button" aria-haspopup="listbox" aria-expanded="false" aria-label="Language">
+        <span class="lang-icon" aria-hidden="true">
+          <svg viewBox="0 0 24 24" width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M3 12h18"/><path d="M12 3a14.5 14.5 0 0 1 0 18a14.5 14.5 0 0 1 0-18z"/></svg>
+        </span>
+        <span class="lang-current">KO</span>
+        <span class="lang-caret" aria-hidden="true">▾</span>
+      </button>
+      <ul class="lang-menu" role="listbox" hidden>
+        <li><button type="button" class="lang-option" data-lang="en"><span class="lang-code">EN</span><span class="lang-name">English</span></button></li>
+        <li><button type="button" class="lang-option" data-lang="ko"><span class="lang-code">KO</span><span class="lang-name">한국어</span></button></li>
+        <li><button type="button" class="lang-option" data-lang="ja"><span class="lang-code">JA</span><span class="lang-name">日本語</span></button></li>
+      </ul>
+    </div>
   </div>
 </nav>
 
@@ -40,39 +56,39 @@
   </div>
   <div class="hero-eyebrow">
     <span class="dot"></span>
-    <span>지금도 뭔가 만들고 있는 중</span>
+    <span data-i18n="hero.eyebrow">지금도 뭔가 만들고 있는 중</span>
   </div>
 
   <h1 class="hero-title">
-    <span class="line">뭐든지 만든다.</span>
-    <span class="line gradient">킴킴아이오.</span>
+    <span class="line" data-i18n="hero.title1">뭐든지 만든다.</span>
+    <span class="line gradient" data-i18n="hero.title2">킴킴아이오.</span>
   </h1>
 
-  <p class="hero-sub">
+  <p class="hero-sub" data-i18n="hero.sub">
     AI 에이전트부터 스마트 글래스, 데스크탑 앱, 게임까지 —<br />
     머릿속에 떠오른 건 일단 만들어보는 김건희의 작업실.
   </p>
 
   <div class="hero-cta">
     <a href="#works" class="btn btn-primary">
-      작업 보러가기
+      <span data-i18n="hero.cta1">작업 보러가기</span>
       <span class="arrow">→</span>
     </a>
-    <a href="#contact" class="btn btn-ghost">같이 만들기</a>
+    <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta2">같이 만들기</a>
   </div>
 
   <div class="hero-stats">
     <div class="stat">
       <div class="stat-num">12+</div>
-      <div class="stat-label">Projects</div>
+      <div class="stat-label" data-i18n="hero.stat1">Projects</div>
     </div>
     <div class="stat">
       <div class="stat-num">∞</div>
-      <div class="stat-label">아이디어</div>
+      <div class="stat-label" data-i18n="hero.stat2">아이디어</div>
     </div>
     <div class="stat">
       <div class="stat-num">1</div>
-      <div class="stat-label">사람</div>
+      <div class="stat-label" data-i18n="hero.stat3">사람</div>
     </div>
   </div>
 </section>
@@ -97,11 +113,11 @@
 <section class="works" id="works">
   <header class="section-header">
     <div class="section-eyebrow">SELECTED WORKS</div>
-    <h2 class="section-title">만든 것들</h2>
-    <p class="section-sub">머리에 떠오를 때마다 하나씩.</p>
+    <h2 class="section-title" data-i18n="works.title">만든 것들</h2>
+    <p class="section-sub" data-i18n="works.sub">머리에 떠오를 때마다 하나씩.</p>
     <button class="filter-toggle" type="button" aria-pressed="false">
       <span class="filter-dot" aria-hidden="true"></span>
-      <span class="filter-label">체험 가능한 것들만 보기</span>
+      <span class="filter-label" data-i18n="works.filter">체험 가능한 것들만 보기</span>
     </button>
   </header>
 
@@ -113,7 +129,7 @@
         <span class="card-year">since 2026</span>
       </div>
       <h3 class="card-title">ECHO</h3>
-      <p class="card-desc">Halo 스마트 글래스에 올라가는 AI 에이전트. 시야에 들어오는 모든 걸 이해하는 동반자.</p>
+      <p class="card-desc" data-i18n="card.echo">Halo 스마트 글래스에 올라가는 AI 에이전트. 시야에 들어오는 모든 걸 이해하는 동반자.</p>
       <div class="card-stack">
         <span>Halo</span><span>Python</span><span>LLM</span>
       </div>
@@ -126,7 +142,7 @@
         <span class="card-year">since 2026</span>
       </div>
       <h3 class="card-title">EasyMac</h3>
-      <p class="card-desc">맥 사용을 더 쉽게. 밝기, 입력 컨트롤부터 시선 추적까지 한곳에서.</p>
+      <p class="card-desc" data-i18n="card.easymac">맥 사용을 더 쉽게. 밝기, 입력 컨트롤부터 시선 추적까지 한곳에서.</p>
       <div class="card-stack">
         <span>Electron</span><span>Node</span><span>YOHA</span>
       </div>
@@ -139,7 +155,7 @@
         <span class="card-year">since 2026</span>
       </div>
       <h3 class="card-title">Kim's Rhythm</h3>
-      <p class="card-desc">손가락이 춤추게 만드는 리듬 게임. 김씨 스타일로.</p>
+      <p class="card-desc" data-i18n="card.kimsrhythm">손가락이 춤추게 만드는 리듬 게임. 김씨 스타일로.</p>
       <div class="card-stack">
         <span>Game</span><span>Audio</span>
       </div>
@@ -153,7 +169,7 @@
       </div>
       <h3 class="card-title">Spellaword</h3>
       <span class="card-url">spellaword.vercel.app ↗</span>
-      <p class="card-desc">영단어 타이핑 게임. 손가락 빠른 사람 유리.</p>
+      <p class="card-desc" data-i18n="card.spellaword">영단어 타이핑 게임. 손가락 빠른 사람 유리.</p>
       <div class="card-stack">
         <span>Game</span><span>Typing</span>
       </div>
@@ -167,21 +183,20 @@
       </div>
       <h3 class="card-title">Handy</h3>
       <span class="card-url">handy.kimkim.io ↗</span>
-      <p class="card-desc">웹캠으로 손을 추적해서 그림 그리고, 퐁 치고, 피아노까지 친다.</p>
+      <p class="card-desc" data-i18n="card.handy">웹캠으로 손을 추적해서 그림 그리고, 퐁 치고, 피아노까지 친다.</p>
       <div class="card-stack">
         <span>YOHA</span><span>TensorFlow.js</span><span>WebGL</span>
       </div>
     </a>
 
-    <a href="https://geon-space.vercel.app/" target="_blank" rel="noopener" class="card">
+    <a href="#" class="card">
       <div class="card-emoji">🌌</div>
       <div class="card-meta">
         <span class="tag">PAUSED</span>
         <span class="card-year">since 2026</span>
       </div>
       <h3 class="card-title">GeonSpace</h3>
-      <span class="card-url">geon-space.vercel.app ↗</span>
-      <p class="card-desc">건희만의 공간. 깃허브 스타일로 꾸민 개인 프로필 페이지.</p>
+      <p class="card-desc" data-i18n="card.geonspace">건희만의 공간. 깃허브 스타일로 꾸민 개인 프로필 페이지.</p>
       <div class="card-stack">
         <span>HTML</span><span>CSS</span><span>JS</span>
       </div>
@@ -195,7 +210,7 @@
       </div>
       <h3 class="card-title">ConnecThaLast</h3>
       <span class="card-url">connecthalast.vercel.app ↗</span>
-      <p class="card-desc">끝말잇기 게임. 단어 끊기면 패배.</p>
+      <p class="card-desc" data-i18n="card.connecthalast">끝말잇기 게임. 단어 끊기면 패배.</p>
       <div class="card-stack">
         <span>Game</span><span>Web</span>
       </div>
@@ -208,7 +223,7 @@
         <span class="card-year">since 2026</span>
       </div>
       <h3 class="card-title">WorldSimul</h3>
-      <p class="card-desc">파이썬으로 짠 복셀 월드 시뮬레이터. 청크 단위로 쌓이는 세계, OpenGL로 직접 굴린다.</p>
+      <p class="card-desc" data-i18n="card.worldsimul">파이썬으로 짠 복셀 월드 시뮬레이터. 청크 단위로 쌓이는 세계, OpenGL로 직접 굴린다.</p>
       <div class="card-stack">
         <span>Python</span><span>OpenGL</span><span>Pygame</span>
       </div>
@@ -222,7 +237,7 @@
       </div>
       <h3 class="card-title">Tryonme</h3>
       <span class="card-url">tryonme.kimkim.io ↗</span>
-      <p class="card-desc">사진 한 장 올리고 실제 브랜드 제품을 골라 그대로 입어보는 가상 피팅. 프롬프트 말고 카탈로그.</p>
+      <p class="card-desc" data-i18n="card.tryonme">사진 한 장 올리고 실제 브랜드 제품을 골라 그대로 입어보는 가상 피팅. 프롬프트 말고 카탈로그.</p>
       <div class="card-stack">
         <span>FASHN AI</span><span>Cloudflare</span><span>Web</span>
       </div>
@@ -235,7 +250,7 @@
         <span class="card-year">since 2025</span>
       </div>
       <h3 class="card-title">ORION</h3>
-      <p class="card-desc">맥에서 돌아가는 데스크탑 AI 어시스턴트. 음성으로 부르면 뭐든 해주는 친구.</p>
+      <p class="card-desc" data-i18n="card.orion">맥에서 돌아가는 데스크탑 AI 어시스턴트. 음성으로 부르면 뭐든 해주는 친구.</p>
       <div class="card-stack">
         <span>macOS</span><span>Python</span><span>Voice</span>
       </div>
@@ -249,7 +264,7 @@
       </div>
       <h3 class="card-title">The Evil Password Game</h3>
       <span class="card-url">theevilpasswordgame.kimkim.io ↗</span>
-      <p class="card-desc">비밀번호 만드는 게 이렇게 힘든 일이었나. 규칙이 점점 미쳐간다.</p>
+      <p class="card-desc" data-i18n="card.evilpassword">비밀번호 만드는 게 이렇게 힘든 일이었나. 규칙이 점점 미쳐간다.</p>
       <div class="card-stack">
         <span>Game</span><span>Web</span>
       </div>
@@ -262,7 +277,7 @@
         <span class="card-year">since 2025</span>
       </div>
       <h3 class="card-title">Geon's RNG</h3>
-      <p class="card-desc">크롬 확장으로 만든 RNG 게임. 운빨 한판 어때요.</p>
+      <p class="card-desc" data-i18n="card.geonsrng">크롬 확장으로 만든 RNG 게임. 운빨 한판 어때요.</p>
       <div class="card-stack">
         <span>Chrome</span><span>Extension</span>
       </div>
@@ -275,7 +290,7 @@
         <span class="card-year">since 2023</span>
       </div>
       <h3 class="card-title">YouTube</h3>
-      <p class="card-desc">만드는 과정 그대로 카메라에. 김건희의 작업실 라이브.</p>
+      <p class="card-desc" data-i18n="card.youtube">만드는 과정 그대로 카메라에. 김건희의 작업실 라이브.</p>
       <div class="card-stack">
         <span>Video</span><span>Devlog</span>
       </div>
@@ -283,7 +298,7 @@
   </div>
 
   <div class="more-soon">
-    <span>+</span> 또 만들 거임
+    <span>+</span> <span data-i18n="works.moreSoon">또 만들 거임</span>
   </div>
 </section>
 
@@ -292,19 +307,19 @@
   <div class="about-grid">
     <div class="about-left">
       <div class="section-eyebrow">ABOUT</div>
-      <h2 class="section-title">한 명이 다 만든다.</h2>
+      <h2 class="section-title" data-i18n="about.title">한 명이 다 만든다.</h2>
     </div>
     <div class="about-right">
-      <p>
+      <p data-i18n="about.p1">
         김건희. 학생이자, 만드는 사람이자, 가끔 영상도 찍는 사람.
         머리에 아이디어가 떠오르면 일단 코드부터 친다. 안되면 다시 친다. 될 때까지.
       </p>
-      <p>
+      <p data-i18n="about.p2">
         AI 에이전트, 스마트 글래스, 데스크탑 앱, 게임, ROM 해킹 — 뭐가 됐든
         "이거 만들 수 있을까?"가 시작점. 결과물은 보통 두 부류:
         <em>잘 동작하는 것</em>, 그리고 <em>다음에 잘 만들기 위한 것</em>.
       </p>
-      <p>
+      <p data-i18n="about.p3">
         진심으로 좋아서 만든다. 그래서 멈추지 않는다.
       </p>
     </div>
@@ -313,18 +328,18 @@
 
 <!-- contact -->
 <section class="contact" id="contact">
-  <h2 class="contact-title">
+  <h2 class="contact-title" data-i18n="contact.title">
     같이 뭔가<br />
     <span class="gradient">만들고 싶다면.</span>
   </h2>
-  <p class="contact-sub">아이디어, 협업, 그냥 인사 — 다 좋습니다.</p>
+  <p class="contact-sub" data-i18n="contact.sub">아이디어, 협업, 그냥 인사 — 다 좋습니다.</p>
   <!-- TODO: 이메일 임시 숨김 — 나중에 다시 노출
   <a href="mailto:ipap0209@gmail.com" class="contact-mail">
     ipap0209@gmail.com
     <span class="arrow">↗</span>
   </a>
   -->
-  <div class="contact-mail contact-mail-placeholder" aria-hidden="true">
+  <div class="contact-mail contact-mail-placeholder" aria-hidden="true" data-i18n="contact.mailPlaceholder">
     이메일은 잠시 후 공개
   </div>
   <div class="contact-socials">
@@ -342,10 +357,10 @@
     <div class="logo-mark big">◆</div>
     <div>
       <div class="footer-brand">kimkim.io</div>
-      <div class="footer-tag">Built with curiosity · since whenever</div>
+      <div class="footer-tag" data-i18n="footer.tag">Built with curiosity · since whenever</div>
     </div>
   </div>
-  <div class="footer-right">
+  <div class="footer-right" data-i18n="footer.copy">
     © 2026 Kim Geonhee. 뭐든지 만들고 있음.
   </div>
 </footer>
