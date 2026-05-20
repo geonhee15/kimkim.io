@@ -52,10 +52,40 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 
 /* ===== hero ===== */
 .hero {
+  position: relative;
   min-height: 100vh;
   display: flex; flex-direction: column; justify-content: center;
   padding: 140px 40px 80px;
   max-width: 1400px; margin: 0 auto;
+}
+.hero-bg {
+  position: absolute;
+  inset: -1px 0 0 0;
+  z-index: -1;
+  overflow: hidden;
+  /* extend beyond hero edges to span full viewport width */
+  left: 50%; right: 50%;
+  margin-left: -50vw; margin-right: -50vw;
+  width: 100vw;
+  pointer-events: none;
+}
+.hero-bg img {
+  width: 100%; height: 100%;
+  object-fit: cover;
+  object-position: center;
+  filter: grayscale(55%) brightness(0.14) contrast(1.25) saturate(0.6);
+}
+.hero-bg-vignette {
+  position: absolute; inset: 0;
+  background:
+    /* strong radial vignette: clear-ish center → black edges */
+    radial-gradient(ellipse 75% 75% at 50% 45%, rgba(10,10,12,0.15) 0%, rgba(10,10,12,0.65) 55%, rgba(10,10,12,0.95) 85%, #0a0a0c 100%),
+    /* bottom fade so works section blends in */
+    linear-gradient(180deg, transparent 0%, transparent 45%, rgba(10,10,12,0.6) 70%, rgba(10,10,12,0.95) 88%, #0a0a0c 100%),
+    /* brand color tint */
+    linear-gradient(135deg, rgba(168,85,247,0.20) 0%, transparent 40%, rgba(56,189,248,0.14) 100%),
+    /* global darken */
+    linear-gradient(0deg, rgba(10,10,12,0.35), rgba(10,10,12,0.35));
 }
 .hero-eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
