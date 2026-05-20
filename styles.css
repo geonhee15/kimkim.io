@@ -291,9 +291,18 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   font-size: 28px;
   font-weight: 800;
   letter-spacing: -0.03em;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
 }
 .card-lg .card-title { font-size: 40px; }
+.card-url {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 12px;
+  color: #71717a;
+  margin-bottom: 14px;
+  transition: color .25s ease;
+}
+.card:hover .card-url { color: #a855f7; }
 .card-desc {
   color: #a1a1aa;
   font-size: 15px;
