@@ -35,12 +35,54 @@ document.querySelectorAll('.card, .section-header, .about-grid, .contact-title')
 // filter: 체험 가능한 것들만 보기
 const filterBtn = document.querySelector('.filter-toggle');
 const worksGrid = document.querySelector('.grid');
+
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+// FLIP-based reorder animation for cards (works everywhere, View Transitions or not)
+function animateCardsFLIP(applyChange) {
+  const cards = [...worksGrid.querySelectorAll('.card')];
+  // FIRST: measure
+  const firstRects = new Map(cards.map(c => [c, c.getBoundingClientRect()]));
+  // CHANGE: toggle the class
+  applyChange();
+  // LAST: measure after layout
+  const lastRects = new Map(cards.map(c => [c, c.getBoundingClientRect()]));
+  // INVERT + PLAY
+  cards.forEach((c, idx) => {
+    const f = firstRects.get(c);
+    const l = lastRects.get(c);
+    const dx = f.left - l.left;
+    const dy = f.top - l.top;
+    if (Math.abs(dx) < 0.5 && Math.abs(dy) < 0.5) return;
+    // staggered delay for playable cards rising — non-playable move with no delay
+    const isPlayable = c.dataset.playable === 'true';
+    const playableIdx = isPlayable
+      ? cards.filter(x => x.dataset.playable === 'true').indexOf(c)
+      : -1;
+    const delay = playableIdx >= 0 ? playableIdx * 50 : 0;
+    c.animate(
+      [
+        { transform: `translate(${dx}px, ${dy}px)` },
+        { transform: 'translate(0, 0)' },
+      ],
+      {
+        duration: 650,
+        easing: 'cubic-bezier(.2,.7,.3,1)',
+        delay,
+        fill: 'both',
+      }
+    );
+  });
+}
+
 if (filterBtn && worksGrid) {
   filterBtn.addEventListener('click', () => {
     const pressed = filterBtn.getAttribute('aria-pressed') === 'true';
     const next = !pressed;
     filterBtn.setAttribute('aria-pressed', String(next));
-    worksGrid.classList.toggle('filter-playable', next);
+    const apply = () => worksGrid.classList.toggle('filter-playable', next);
+    if (prefersReducedMotion) { apply(); return; }
+    animateCardsFLIP(apply);
   });
 }
 

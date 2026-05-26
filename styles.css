@@ -398,6 +398,29 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   user-select: none;
 }
 .grid.filter-playable .card:not([data-playable])::before { opacity: 0 !important; }
+
+/* filter ON: pull playable cards to the top, push non-playable down */
+.grid.filter-playable .card[data-playable] { order: 0; }
+.grid.filter-playable .card:not([data-playable]) { order: 1; }
+
+/* fallback FLIP transition for browsers without View Transitions */
+.grid .card { transition: transform .55s cubic-bezier(.2,.7,.3,1),
+                          opacity .35s ease,
+                          filter .35s ease,
+                          background .35s ease,
+                          border-color .35s ease; }
+@media (prefers-reduced-motion: reduce) {
+  .grid .card { transition: opacity .2s ease, filter .2s ease !important; }
+}
+
+/* View Transitions API: smooth root crossfade for the grid reorder */
+@supports (view-transition-name: none) {
+  ::view-transition-old(root),
+  ::view-transition-new(root) {
+    animation-duration: 0.55s;
+    animation-timing-function: cubic-bezier(.2,.7,.3,1);
+  }
+}
 .card-lg { grid-column: span 2; min-height: 320px; }
 .card-emoji {
   font-size: 48px;
