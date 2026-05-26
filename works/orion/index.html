@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ORION — Kimkim.io</title>
+<meta name="description" content="JARVIS-style macOS desktop AI assistant. Iterated 11 times from V1 to O1." />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Pretendard:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-gradient"></div>
+<div class="bg-noise"></div>
+
+<nav class="nav nav-placeholder" id="navHost" data-partial="/partials/nav.html"></nav>
+
+<main class="deep-dive">
+
+  <a href="/" class="deep-back">← <span data-i18n="deep.back">홈으로</span></a>
+
+  <!-- hero -->
+  <header class="deep-hero">
+    <div class="deep-caption" data-i18n="orion.caption">MAJOR PROJECT · 11 VERSIONS · V1 → O1</div>
+    <h1 class="deep-title">ORION</h1>
+    <p class="deep-subtitle" data-i18n="orion.subtitle">맥에서 돌아가는 JARVIS 스타일 데스크탑 AI 비서. 11번 다시 짰다.</p>
+    <div class="deep-meta">
+      <span class="deep-status-badge deep-status-progress">IN PROGRESS</span>
+      <span class="deep-status-badge deep-status-shipped">O1 SHIPPED</span>
+      <span class="deep-year">since 2025</span>
+    </div>
+    <div class="deep-hero-visual">
+      <div class="deep-visual-placeholder">
+        <span class="deep-visual-emoji">🪐</span>
+        <span class="deep-visual-label">Image coming soon</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- overview -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">OVERVIEW</div>
+    <p class="deep-prose" data-i18n="orion.overview">JARVIS 스타일 데스크탑 AI 비서. macOS 네이티브로 돌아가며 240×240 HUD를 별도 PyQt6 클라이언트로 띄운다 (HUD 자체의 시안/초록 비주얼은 EDITH 레퍼런스). 'Hey Orion'으로 깨우고, Claude API로 대화하고, 캘린더/음악/배달 자동화/Chrome 작업 자동화까지 처리. 마지막 메이저 리라이트 O1(2026-02-18)에서 HUD, WebSocket, Self-Development Engine, Work Assistant 통합.</p>
+  </section>
+
+  <!-- why -->
+  <section class="deep-section deep-why">
+    <div class="deep-section-eyebrow">WHY I'M BUILDING THIS</div>
+    <p class="deep-prose deep-prose-large" data-i18n="orion.why">내가 매일 쓰는 컴퓨터부터 JARVIS화하고 싶었다. 글래스(ECHO, EDITH 계열)로 가기 전 데스크탑에서 한 번 끝까지 풀어보는 사전 단계. Orion에서 검증한 패턴이 그대로 ECHO 백엔드로 이어진다.</p>
+  </section>
+
+  <!-- key features -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">KEY FEATURES</div>
+    <ul class="deep-feature-list">
+      <li data-i18n="orion.feature1">Voice Assistant — "Hey Orion" 웨이크 워드</li>
+      <li data-i18n="orion.feature2">240×240 HUD — 시안/초록 디스플레이 (EDITH 비주얼 레퍼런스, 시간/날씨/캘린더/AI 응답 표시)</li>
+      <li data-i18n="orion.feature3">Calendar Integration — macOS Calendar.app 연동, 일정 조회/요약</li>
+      <li data-i18n="orion.feature4">Music Player — 음성으로 음악 재생/정지/볼륨 조절</li>
+      <li data-i18n="orion.feature5">Delivery Automation — 음성으로 LotteEatz 배달 주문</li>
+      <li data-i18n="orion.feature6">Self-Development Engine — idle 시 자동 코드 개선, 적용 전 2중 확인</li>
+      <li data-i18n="orion.feature7">Work Assistant — Chrome에서 `hhheeelllppp` 입력 시 페이지 분석 & 자동 입력 (수학 풀이, 에세이 작성, 폼 채우기)</li>
+      <li data-i18n="orion.feature8">Schedule Reminder — 매일 오전 8시 브리핑 + 이벤트 15분 전 알림</li>
+      <li data-i18n="orion.feature9">Hallucination Filter — Whisper STT 환청 다단계 필터링</li>
+    </ul>
+  </section>
+
+  <!-- stack -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">STACK</div>
+    <div class="deep-stack">
+      <span>Claude API</span>
+      <span>Whisper (mlx/API)</span>
+      <span>ElevenLabs TTS</span>
+      <span>FastAPI</span>
+      <span>WebSocket</span>
+      <span>uvicorn</span>
+      <span>Pillow</span>
+      <span>PyQt6</span>
+      <span>sounddevice</span>
+      <span>pygame</span>
+      <span>pynput</span>
+      <span>AppleScript</span>
+      <span>Playwright</span>
+      <span>icalBuddy</span>
+      <span>Python 3.12+</span>
+      <span>macOS Apple Silicon</span>
+    </div>
+  </section>
+
+  <!-- timeline (11 versions) -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">PROGRESS LOG · 11 VERSIONS</div>
+    <ol class="deep-timeline">
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-01-24</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-V">V1</span><span data-i18n="orion.tl.v1">Core: Claude API, Tavily, Notifications</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-01-26</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-V">V2</span><span data-i18n="orion.tl.v2">Screen capture analysis</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-01-28</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-V">V3</span><span data-i18n="orion.tl.v3">Camera input analysis</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-01-28</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-V">V4</span><span data-i18n="orion.tl.v4">ElevenLabs TTS</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-01-30</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-V">V5</span><span data-i18n="orion.tl.v5">Gesture control</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-01-30</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-V">V6</span><span data-i18n="orion.tl.v6">Music player</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-02-01</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-C">C1</span><span data-i18n="orion.tl.c1">Assistant identity</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-02-01</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-C">C2</span><span data-i18n="orion.tl.c2">Voice recognition</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-02-02</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-C">C3</span><span data-i18n="orion.tl.c3">Calendar integration</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-02-03</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-C">C4</span><span data-i18n="orion.tl.c4">Delivery automation</span></div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026-02-18</div>
+        <div class="deep-timeline-what"><span class="deep-version-tag deep-version-O">O1</span><span data-i18n="orion.tl.o1">Full rewrite: HUD, WebSocket, Self-Dev, Work Assistant</span></div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- what's next -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">CURRENT CHALLENGES · WHAT'S NEXT</div>
+    <ul class="deep-feature-list">
+      <li data-i18n="orion.next1">ECHO와 통합 (데스크탑 ↔ 글래스 cross-device handoff)</li>
+      <li data-i18n="orion.next2">로컬 LLM fallback 옵션</li>
+    </ul>
+  </section>
+
+  <!-- links -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">LINKS</div>
+    <ul class="deep-links">
+      <li><a href="https://github.com/geonhee15/Orion_AI" target="_blank" rel="noopener">github.com/geonhee15/Orion_AI ↗</a></li>
+    </ul>
+  </section>
+
+  <div class="deep-back-foot">
+    <a href="/" class="deep-back-btn">← <span data-i18n="deep.back">홈으로</span></a>
+  </div>
+
+</main>
+
+<footer class="footer footer-placeholder" id="footerHost" data-partial="/partials/footer.html"></footer>
+
+<script src="/main.js"></script>
+</body>
+</html>

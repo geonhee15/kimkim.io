@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Security Research — Kimkim.io</title>
+<meta name="description" content="Finding vulnerabilities. Disclosing responsibly. 28-page bilingual audit on a peer's deployed website." />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Pretendard:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<div class="bg-grid"></div>
+<div class="bg-gradient"></div>
+<div class="bg-noise"></div>
+
+<nav class="nav nav-placeholder" id="navHost" data-partial="/partials/nav.html"></nav>
+
+<main class="deep-dive">
+
+  <a href="/" class="deep-back">← <span data-i18n="deep.back">홈으로</span></a>
+
+  <!-- hero -->
+  <header class="deep-hero">
+    <div class="deep-caption" data-i18n="cyber.caption">MAJOR PROJECT · SECURITY RESEARCH</div>
+    <h1 class="deep-title">Security Research</h1>
+    <p class="deep-subtitle" data-i18n="cyber.subtitle">취약점을 찾고, 책임 있게 알린다.</p>
+    <div class="deep-meta">
+      <span class="deep-status-badge deep-status-progress">ACTIVE</span>
+      <span class="deep-year">since 2025</span>
+    </div>
+    <div class="deep-hero-visual">
+      <div class="deep-visual-placeholder">
+        <span class="deep-visual-emoji">🛡️</span>
+        <span class="deep-visual-label">Image coming soon</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- overview -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">OVERVIEW</div>
+    <p class="deep-prose" data-i18n="cyber.overview">보안은 시스템을 빌더의 관점이 아니라 공격자의 관점에서 보는 일. 실제 배포된 시스템을 감사하고, 발견한 취약점을 책임 있게 disclosure 하는 end-to-end 과정을 통해 배운다. 학교 동료의 사이트 cisixers.org에 대한 28페이지 한영 bilingual 보안 감사 보고서를 작성, HackerOne/Bugcrowd 포맷으로 정리해 직접 disclosure.</p>
+  </section>
+
+  <!-- RESPONSIBLE DISCLOSURE callout -->
+  <aside class="deep-disclosure">
+    <div class="deep-disclosure-eyebrow">RESPONSIBLE DISCLOSURE</div>
+    <dl class="deep-disclosure-rows">
+      <div class="deep-disclosure-row">
+        <dt data-i18n="cyber.disclosure.target.label">대상</dt>
+        <dd data-i18n="cyber.disclosure.target.value">학교 동료의 배포 사이트 (cisixers.org)</dd>
+      </div>
+      <div class="deep-disclosure-row">
+        <dt data-i18n="cyber.disclosure.findings.label">발견 사항</dt>
+        <dd data-i18n="cyber.disclosure.findings.value">15개 (Critical 3 · High 3 · Medium 4 · Low 4 · Info 1)</dd>
+      </div>
+      <div class="deep-disclosure-row">
+        <dt data-i18n="cyber.disclosure.report.label">보고서</dt>
+        <dd data-i18n="cyber.disclosure.report.value">28페이지 EN/KR bilingual, CVSS 3.1 + CWE tags, HackerOne 포맷</dd>
+      </div>
+      <div class="deep-disclosure-row">
+        <dt data-i18n="cyber.disclosure.handoff.label">Disclosure</dt>
+        <dd data-i18n="cyber.disclosure.handoff.value">비공개 채널로 사이트 소유자에게 먼저 전달, 72시간 책임 공개 방침</dd>
+      </div>
+    </dl>
+  </aside>
+
+  <!-- why -->
+  <section class="deep-section deep-why">
+    <div class="deep-section-eyebrow">WHY I'M BUILDING THIS</div>
+    <p class="deep-prose deep-prose-large" data-i18n="cyber.why">내가 만든 것이 깨지지 않으려면 깨는 법을 알아야 한다. 그리고 보안은 '잘 모르고 만든 사람'을 비난하는 게 아니라 같이 고치는 일이라는 걸 disclosure 과정에서 배웠다.</p>
+  </section>
+
+  <!-- sample findings -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">SAMPLE FINDINGS</div>
+    <ul class="deep-findings">
+      <li class="deep-finding">
+        <span class="deep-finding-id">CISIXERS-001</span>
+        <span><span class="deep-finding-sev critical">CRITICAL</span><span data-i18n="cyber.finding1">Google OAuth Client Secret이 .env를 통해 public 레포지토리에 커밋</span></span>
+      </li>
+      <li class="deep-finding">
+        <span class="deep-finding-id">CISIXERS-002 / 006</span>
+        <span><span class="deep-finding-sev high">HIGH</span><span data-i18n="cyber.finding2">Firestore & Storage Rules (test mode → deny-by-default 권고)</span></span>
+      </li>
+      <li class="deep-finding">
+        <span class="deep-finding-id">CISIXERS-003 / 005</span>
+        <span><span class="deep-finding-sev medium">MEDIUM</span><span data-i18n="cyber.finding3">Google OAuth `hd` 파라미터 누락 (도메인 제한 없음)</span></span>
+      </li>
+      <li class="deep-finding">
+        <span class="deep-finding-id">CISIXERS-007</span>
+        <span><span class="deep-finding-sev medium">MEDIUM</span><span data-i18n="cyber.finding4">localStorage에 사용자 신원 중복 저장</span></span>
+      </li>
+      <li class="deep-finding">
+        <span class="deep-finding-id">CISIXERS-013</span>
+        <span><span class="deep-finding-sev info">INFO</span><span data-i18n="cyber.finding5">`.DS_Store` git 커밋</span></span>
+      </li>
+    </ul>
+  </section>
+
+  <!-- training & practice -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">TRAINING & PRACTICE</div>
+    <ul class="deep-feature-list">
+      <li data-i18n="cyber.train1">OWASP Juice Shop — DOM XSS, JWT None Attack, IDOR (basket access)</li>
+      <li data-i18n="cyber.train2">TryHackMe — Upload Vulnerabilities room, reverse shell + flag 획득</li>
+      <li data-i18n="cyber.train3">JWT 토큰 분석 및 권한 상승 실습</li>
+    </ul>
+  </section>
+
+  <!-- research interests -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">RESEARCH INTERESTS</div>
+    <ul class="deep-feature-list">
+      <li data-i18n="cyber.research1">Zero-day vs N-day 취약점 분류</li>
+      <li data-i18n="cyber.research2">Web application security</li>
+      <li data-i18n="cyber.research3">Authentication / authorization 패턴</li>
+    </ul>
+  </section>
+
+  <!-- toolchain -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">TOOLCHAIN</div>
+    <div class="deep-stack">
+      <span>gobuster</span>
+      <span>curl</span>
+      <span>Chrome DevTools</span>
+      <span>OrbStack Ubuntu VM</span>
+      <span>macOS</span>
+    </div>
+  </section>
+
+  <!-- ethics note -->
+  <aside class="deep-ethics" data-i18n="cyber.ethics">
+    모든 보안 작업은 비공개 disclosure 채널로 진행됨. Public 정보(공개 레포지토리, 배포된 사이트의 클라이언트 코드)에 한정. Responsible disclosure 원칙 준수.
+  </aside>
+
+  <div class="deep-back-foot">
+    <a href="/" class="deep-back-btn">← <span data-i18n="deep.back">홈으로</span></a>
+  </div>
+
+</main>
+
+<footer class="footer footer-placeholder" id="footerHost" data-partial="/partials/footer.html"></footer>
+
+<script src="/main.js"></script>
+</body>
+</html>

@@ -1272,6 +1272,218 @@ body.cube-modal-open { overflow: hidden; }
 }
 .deep-links a:hover { color: #c4b5fd; border-bottom-color: rgba(168,85,247,0.4); }
 
+/* ----- version badge (Orion timeline) ----- */
+.deep-version-tag {
+  display: inline-block;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 3px 8px;
+  border-radius: 6px;
+  margin-right: 8px;
+  border: 1px solid transparent;
+  vertical-align: middle;
+}
+.deep-version-V { background: rgba(161,161,170,0.10); color: #a1a1aa; border-color: rgba(255,255,255,0.10); }
+.deep-version-C { background: rgba(56, 189, 248, 0.12); color: #38bdf8; border-color: rgba(56, 189, 248, 0.22); }
+.deep-version-O { background: rgba(168, 85, 247, 0.15); color: #c4b5fd; border-color: rgba(168, 85, 247, 0.32); }
+
+/* ----- disclosure callout (Cybersecurity) ----- */
+.deep-disclosure {
+  position: relative;
+  padding: 32px 36px;
+  border-radius: 20px;
+  background:
+    linear-gradient(135deg, rgba(168, 85, 247, 0.07) 0%, rgba(244, 114, 182, 0.04) 100%);
+  border: 1px solid rgba(168, 85, 247, 0.25);
+  margin-bottom: 96px;
+}
+.deep-disclosure::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 3px;
+  background: linear-gradient(to bottom, #a855f7, #ec4899);
+  border-radius: 20px 0 0 20px;
+}
+.deep-disclosure-eyebrow {
+  display: flex; align-items: center; gap: 8px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #ec4899;
+  font-family: 'JetBrains Mono', monospace;
+  margin-bottom: 18px;
+}
+.deep-disclosure-eyebrow::before {
+  content: '✓';
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 18px; height: 18px;
+  border-radius: 50%;
+  background: rgba(236, 72, 153, 0.2);
+  border: 1px solid rgba(236, 72, 153, 0.4);
+  color: #ec4899;
+  font-size: 11px;
+  font-weight: 900;
+  letter-spacing: 0;
+}
+.deep-disclosure-rows { display: grid; gap: 14px; }
+.deep-disclosure-row {
+  display: grid;
+  grid-template-columns: 140px 1fr;
+  gap: 18px;
+  align-items: baseline;
+  font-size: 14px;
+  line-height: 1.55;
+}
+.deep-disclosure-row dt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  color: #a1a1aa;
+  text-transform: uppercase;
+}
+.deep-disclosure-row dd { color: #e4e4e7; }
+
+/* ----- finding cards (Cybersecurity sample findings) ----- */
+.deep-findings {
+  list-style: none;
+  display: flex; flex-direction: column;
+  gap: 10px;
+}
+.deep-finding {
+  padding: 16px 18px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #d4d4d8;
+  line-height: 1.5;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 14px;
+  align-items: baseline;
+  transition: background .2s, border-color .2s;
+}
+.deep-finding:hover { background: rgba(255,255,255,0.045); border-color: rgba(255,255,255,0.12); }
+.deep-finding-id {
+  color: #a855f7;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+.deep-finding-sev {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 2px 7px;
+  border-radius: 4px;
+  margin-right: 6px;
+}
+.deep-finding-sev.critical { background: rgba(239, 68, 68, 0.15); color: #f87171; }
+.deep-finding-sev.high     { background: rgba(251, 146, 60, 0.15); color: #fb923c; }
+.deep-finding-sev.medium   { background: rgba(251, 191, 36, 0.15); color: #fbbf24; }
+.deep-finding-sev.low      { background: rgba(161, 161, 170, 0.12); color: #a1a1aa; }
+.deep-finding-sev.info     { background: rgba(56, 189, 248, 0.12); color: #38bdf8; }
+
+/* ----- ethics footnote ----- */
+.deep-ethics {
+  margin-top: 60px;
+  padding: 20px 24px;
+  border-radius: 12px;
+  background: rgba(255,255,255,0.02);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-left: 3px solid rgba(168, 85, 247, 0.4);
+  font-size: 13px;
+  color: #a1a1aa;
+  line-height: 1.65;
+}
+
+/* ----- hardware sub-project grid ----- */
+.deep-subgrid-section { margin-bottom: 96px; }
+.deep-subgrid-group { margin-bottom: 40px; }
+.deep-subgrid-group:last-child { margin-bottom: 0; }
+.deep-subgrid-group-label {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  color: #71717a;
+  margin-bottom: 16px;
+  display: flex; align-items: center; gap: 12px;
+}
+.deep-subgrid-group-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(to right, rgba(255,255,255,0.1), transparent);
+}
+.deep-subgrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 14px;
+}
+.deep-subcard {
+  display: flex; flex-direction: column;
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: background .25s, border-color .25s, transform .25s;
+  text-decoration: none;
+  color: inherit;
+}
+.deep-subcard:hover {
+  background: rgba(255,255,255,0.045);
+  border-color: rgba(255,255,255,0.14);
+  transform: translateY(-3px);
+}
+.deep-subcard-icon {
+  font-size: 32px;
+  margin-bottom: 16px;
+  filter: drop-shadow(0 4px 14px rgba(168, 85, 247, 0.25));
+}
+.deep-subcard-meta { display: flex; gap: 8px; margin-bottom: 10px; }
+.deep-subcard-title {
+  font-size: 17px;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 8px;
+  color: #f4f4f5;
+  line-height: 1.3;
+}
+.deep-subcard-desc {
+  font-size: 13.5px;
+  color: #a1a1aa;
+  line-height: 1.55;
+  margin-bottom: 16px;
+  flex: 1;
+}
+.deep-subcard-stack {
+  display: flex; gap: 6px; flex-wrap: wrap;
+  margin-top: auto;
+}
+.deep-subcard-stack span {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10.5px;
+  padding: 3px 8px;
+  border-radius: 5px;
+  background: rgba(255,255,255,0.04);
+  color: #a1a1aa;
+  border: 1px solid rgba(255,255,255,0.06);
+}
+
+@media (max-width: 900px) {
+  .deep-subgrid { grid-template-columns: 1fr; }
+  .deep-disclosure { padding: 24px 22px; }
+  .deep-disclosure-row { grid-template-columns: 1fr; gap: 2px; }
+  .deep-finding { grid-template-columns: 1fr; gap: 6px; }
+}
+
 .deep-back-foot {
   margin-top: 40px; padding-top: 60px;
   border-top: 1px solid rgba(255,255,255,0.06);
