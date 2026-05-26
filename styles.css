@@ -1110,7 +1110,7 @@ body.cube-modal-open { overflow: hidden; }
   margin-left: 6px;
 }
 
-/* ----- hero visual placeholder ----- */
+/* ----- hero visual (single placeholder OR 2×2 image grid) ----- */
 .deep-hero-visual {
   width: 100%;
   border-radius: 24px;
@@ -1137,6 +1137,199 @@ body.cube-modal-open { overflow: hidden; }
   font-family: 'JetBrains Mono', monospace;
   letter-spacing: 0.18em;
   text-transform: uppercase;
+}
+
+/* ----- 2×2 hero grid (ECHO) ----- */
+.deep-hero-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  padding: 14px;
+}
+.deep-hero-cell {
+  position: relative;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background:
+    radial-gradient(circle at 30% 40%, rgba(168, 85, 247, 0.10), transparent 60%),
+    radial-gradient(circle at 70% 60%, rgba(56, 189, 248, 0.06), transparent 60%);
+  border: 1px solid rgba(255,255,255,0.06);
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column;
+  gap: 10px;
+}
+.deep-hero-cell img {
+  width: 100%; height: 100%;
+  display: block;
+  transition: transform .35s cubic-bezier(.2,.7,.3,1), filter .35s ease;
+}
+.deep-hero-cell-image img { object-fit: contain; padding: 12%; }
+.deep-hero-cell-cover img { object-fit: cover; padding: 0; }
+.deep-hero-cell-image:hover img { transform: scale(1.04); filter: brightness(1.08); }
+.deep-hero-cell-caption {
+  position: absolute;
+  bottom: 12px; right: 12px;
+  padding: 4px 10px;
+  border-radius: 6px;
+  background: rgba(10,10,12,0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #e4e4e7;
+  letter-spacing: 0.04em;
+}
+.deep-hero-cell-placeholder { background:
+  radial-gradient(circle at 35% 45%, rgba(168, 85, 247, 0.08), transparent 60%),
+  radial-gradient(circle at 70% 55%, rgba(56, 189, 248, 0.05), transparent 60%);
+}
+.deep-hero-cell-emoji {
+  font-size: 42px;
+  opacity: 0.55;
+  filter: drop-shadow(0 4px 14px rgba(168, 85, 247, 0.25));
+}
+.deep-hero-cell-label {
+  font-size: 10px;
+  font-family: 'JetBrains Mono', monospace;
+  color: #71717a;
+  letter-spacing: 0.18em;
+}
+@media (max-width: 768px) {
+  .deep-hero-grid { gap: 10px; padding: 10px; }
+  .deep-hero-cell-emoji { font-size: 32px; }
+  .deep-hero-cell-caption { font-size: 10px; padding: 3px 8px; }
+}
+
+/* ----- security report card (PDF preview) ----- */
+.deep-report {
+  position: relative;
+  padding: 40px 44px 32px;
+  border-radius: 20px;
+  background: linear-gradient(135deg, #1a0a0a 0%, #14080a 60%, #18090c 100%);
+  border: 1px solid rgba(220, 38, 38, 0.20);
+  overflow: hidden;
+}
+.deep-report::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #dc2626, #991b1b);
+}
+.deep-report-confidential {
+  position: absolute;
+  top: 28px; right: 32px;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 9.5px;
+  font-weight: 800;
+  letter-spacing: 0.18em;
+  padding: 5px 10px;
+  background: rgba(220, 38, 38, 0.14);
+  border: 1px solid rgba(220, 38, 38, 0.42);
+  border-radius: 5px;
+  color: #f87171;
+}
+.deep-report-eyebrow {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.22em;
+  color: #f87171;
+  margin-bottom: 16px;
+  padding-bottom: 10px;
+  position: relative;
+  display: inline-block;
+}
+.deep-report-eyebrow::after {
+  content: '';
+  position: absolute;
+  left: 0; bottom: 0;
+  width: 42px;
+  height: 2px;
+  background: #dc2626;
+}
+.deep-report-title {
+  font-size: clamp(28px, 4vw, 42px);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #fff;
+  margin-bottom: 6px;
+  line-height: 1.05;
+}
+.deep-report-subtitle {
+  font-size: 14.5px;
+  color: #a1a1aa;
+  margin-bottom: 32px;
+  line-height: 1.4;
+}
+.deep-report-meta {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px 36px;
+  padding: 24px 0;
+  border-top: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  margin-bottom: 26px;
+}
+.deep-report-meta dt {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.2em;
+  color: #71717a;
+  margin-bottom: 5px;
+}
+.deep-report-meta dd {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 13px;
+  color: #e4e4e7;
+  letter-spacing: 0.02em;
+}
+.deep-report-actions {
+  display: flex; gap: 12px; flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.deep-report-btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  transition: transform .2s, background .2s, border-color .2s, box-shadow .2s;
+  cursor: pointer;
+}
+.deep-report-btn-primary {
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: #fff;
+  border: 1px solid rgba(220, 38, 38, 0.42);
+}
+.deep-report-btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 30px rgba(220, 38, 38, 0.32);
+}
+.deep-report-btn-ghost {
+  background: rgba(255,255,255,0.04);
+  color: #d4d4d8;
+  border: 1px solid rgba(255,255,255,0.1);
+}
+.deep-report-btn-ghost:hover {
+  background: rgba(255,255,255,0.08);
+  border-color: rgba(255,255,255,0.2);
+  transform: translateY(-2px);
+}
+.deep-report-disclaimer {
+  font-size: 12px;
+  color: #71717a;
+  line-height: 1.6;
+  font-style: italic;
+  margin-top: 4px;
+}
+@media (max-width: 768px) {
+  .deep-report { padding: 28px 24px 24px; }
+  .deep-report-confidential { position: static; display: inline-block; margin-bottom: 16px; }
+  .deep-report-meta { grid-template-columns: 1fr; gap: 16px; padding: 20px 0; }
 }
 
 /* ----- generic section ----- */

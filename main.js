@@ -215,6 +215,11 @@ const I18N = {
     'echo.next2': 'Halo SDK Python/Flutter/Lua 중 결정',
     'echo.next3': 'HUD 레이아웃 설계 (IPD 64mm 기준)',
     'echo.next4': '글래스 ↔ 데스크탑 Orion cross-device handoff',
+    // ECHO hero grid
+    'echo.hero.cell1.alt': 'Brilliant Labs Halo AR 글래스',
+    'echo.hero.cell2.alt': 'Fly.io에 ECHO 배포 중',
+    'echo.hero.cell2.caption': 'ECHO → Fly.io',
+    'echo.hero.placeholder': 'IMAGE COMING SOON',
     // ORION page
     'orion.caption': 'MAJOR PROJECT · 11 VERSIONS · V1 → O1',
     'orion.subtitle': '맥에서 돌아가는 JARVIS 스타일 데스크탑 AI 비서. 11번 다시 짰다.',
@@ -267,6 +272,21 @@ const I18N = {
     'cyber.research2': 'Web application security',
     'cyber.research3': 'Authentication / authorization 패턴',
     'cyber.ethics': '모든 보안 작업은 비공개 disclosure 채널로 진행됨. Public 정보(공개 레포지토리, 배포된 사이트의 클라이언트 코드)에 한정. Responsible disclosure 원칙 준수.',
+    // CYBER report card (PDF)
+    'cyber.report.header': '보고서',
+    'cyber.report.eyebrow': '독립 보안 연구',
+    'cyber.report.title': 'Security Audit Report',
+    'cyber.report.subtitle': '보안 취약점 점검 보고서',
+    'cyber.report.meta.target': '[redacted].org',
+    'cyber.report.meta.repo': 'github.com/[peer]/[redacted]',
+    'cyber.report.meta.researcher': 'Geonhee (건희)',
+    'cyber.report.meta.date': 'April 18, 2026',
+    'cyber.report.meta.findings': '15',
+    'cyber.report.meta.severity': '3C · 3H · 4M · 4L · 1I',
+    'cyber.report.confidential': 'CONFIDENTIAL · REDACTED',
+    'cyber.report.btn.view': '보고서 보기 →',
+    'cyber.report.btn.download': '다운로드',
+    'cyber.report.disclaimer': '공개용 버전. 민감 식별자 가림 처리. 원본은 리포지토리 소유자에게 비공개로 전달됨.',
     // HARDWARE page
     'hw.caption': 'MAJOR PROJECT · ONGOING BUILDS',
     'hw.subtitle': '소프트웨어가 물리 세계와 만나는 지점.',
@@ -390,6 +410,11 @@ const I18N = {
     'echo.next2': 'Pick Halo SDK target — Python / Flutter / Lua',
     'echo.next3': 'Design HUD layout (anchored on 64mm IPD)',
     'echo.next4': 'Glasses ↔ desktop-Orion cross-device handoff',
+    // ECHO hero grid
+    'echo.hero.cell1.alt': 'Brilliant Labs Halo AR glasses',
+    'echo.hero.cell2.alt': 'Deploying ECHO to Fly.io',
+    'echo.hero.cell2.caption': 'ECHO → Fly.io',
+    'echo.hero.placeholder': 'IMAGE COMING SOON',
     // ORION page
     'orion.caption': 'MAJOR PROJECT · 11 VERSIONS · V1 → O1',
     'orion.subtitle': 'JARVIS-style macOS desktop AI assistant. Iterated 11 times from V1 to O1.',
@@ -442,6 +467,21 @@ const I18N = {
     'cyber.research2': 'Web application security',
     'cyber.research3': 'Authentication / authorization patterns',
     'cyber.ethics': 'All security work is conducted through private disclosure channels. Scoped to public information (open repositories, client-side code of deployed sites). Responsible disclosure principles strictly followed.',
+    // CYBER report card (PDF)
+    'cyber.report.header': 'The Report',
+    'cyber.report.eyebrow': 'INDEPENDENT SECURITY RESEARCH',
+    'cyber.report.title': 'Security Audit Report',
+    'cyber.report.subtitle': 'Security Audit Report',
+    'cyber.report.meta.target': '[redacted].org',
+    'cyber.report.meta.repo': 'github.com/[peer]/[redacted]',
+    'cyber.report.meta.researcher': 'Geonhee (건희)',
+    'cyber.report.meta.date': 'April 18, 2026',
+    'cyber.report.meta.findings': '15',
+    'cyber.report.meta.severity': '3C · 3H · 4M · 4L · 1I',
+    'cyber.report.confidential': 'CONFIDENTIAL · REDACTED',
+    'cyber.report.btn.view': 'View Report →',
+    'cyber.report.btn.download': 'Download',
+    'cyber.report.disclaimer': 'Public-release version. Sensitive identifiers redacted. Original report delivered privately to the repository owner.',
     // HARDWARE page
     'hw.caption': 'MAJOR PROJECT · ONGOING BUILDS',
     'hw.subtitle': 'Where software meets the physical world.',
@@ -522,6 +562,11 @@ function applyLang(lang) {
     const key = el.getAttribute('data-i18n');
     const value = dict[key] !== undefined ? dict[key] : fallback[key];
     if (value !== undefined) el.innerHTML = value;
+  });
+  document.querySelectorAll('[data-i18n-alt]').forEach(el => {
+    const key = el.getAttribute('data-i18n-alt');
+    const value = dict[key] !== undefined ? dict[key] : fallback[key];
+    if (value !== undefined) el.setAttribute('alt', value);
   });
   // update switcher label
   const cur = document.querySelector('.lang-current');
