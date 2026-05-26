@@ -73,7 +73,23 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 .logo-mark { color: #a855f7; font-size: 14px; animation: spin 8s linear infinite; display: inline-block; }
 .logo-mark.big { font-size: 28px; }
 @keyframes spin { to { transform: rotate(360deg); } }
-.nav-right { display: flex; align-items: center; gap: 28px; }
+.nav-right { display: flex; align-items: center; gap: 20px; }
+.nav-github {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 34px; height: 34px;
+  border-radius: 999px;
+  color: #a1a1aa;
+  background: transparent;
+  border: 1px solid transparent;
+  transition: color .2s, background .2s, border-color .2s, transform .2s;
+}
+.nav-github:hover {
+  color: #fff;
+  background: rgba(255,255,255,0.06);
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-1px);
+}
+.nav-github svg { display: block; }
 .nav-links { display: flex; gap: 32px; }
 .nav-links a { font-size: 14px; color: #a1a1aa; transition: color .2s; }
 .nav-links a:hover { color: #fff; }
