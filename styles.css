@@ -769,6 +769,7 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 }
 
 /* ===== beyond card: clickable variant (cube modal trigger) ===== */
+.beyond-card-link { text-decoration: none; color: inherit; cursor: pointer; }
 .beyond-card-clickable { cursor: pointer; }
 .beyond-card-clickable:focus-visible {
   outline: 2px solid #a855f7;
