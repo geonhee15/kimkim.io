@@ -381,9 +381,14 @@ if (cubeModal && cubeTrigger) {
   const video = cubeModal.querySelector('.cube-modal-video');
   const tabs = [...cubeModal.querySelectorAll('.cube-modal-tab')];
   const closeBtns = [...cubeModal.querySelectorAll('[data-close]')];
-  const VIDEO_SRC = {
+  // dev (localhost) → local files (offline OK), prod → Cloudflare R2 (videos.kimkim.io)
+  const isLocalDev = ['localhost', '127.0.0.1', '0.0.0.0'].includes(location.hostname);
+  const VIDEO_SRC = isLocalDev ? {
     '3x3': '/assets/videos/cube-3x3-winner.mp4',
     '2x2': '/assets/videos/cube-2x2-winner.mp4',
+  } : {
+    '3x3': 'https://videos.kimkim.io/cube-3x3-winner.mp4',
+    '2x2': 'https://videos.kimkim.io/cube-2x2-winner.mp4',
   };
   let lastFocused = null;
   let trapHandler = null;
