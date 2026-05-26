@@ -1,3 +1,23 @@
+// ===== partial include (fetch nav/footer from /partials/, then run main) =====
+(async () => {
+
+async function setupPartials() {
+  const placeholders = [...document.querySelectorAll('[data-partial]')];
+  await Promise.all(placeholders.map(async (el) => {
+    const url = el.dataset.partial;
+    try {
+      const r = await fetch(url, { cache: 'no-cache' });
+      if (!r.ok) throw new Error(`HTTP ${r.status}`);
+      el.innerHTML = await r.text();
+      el.classList.remove('nav-placeholder', 'footer-placeholder');
+    } catch (e) {
+      console.warn('[partial] failed to load', url, e.message);
+    }
+  }));
+}
+
+await setupPartials();
+
 // card hover spotlight
 document.querySelectorAll('.card').forEach(card => {
   card.addEventListener('mousemove', e => {
@@ -467,3 +487,5 @@ if (cubeModal && cubeTrigger) {
     console.warn('[cube-modal] video failed to load:', video.currentSrc || video.src);
   });
 }
+
+})(); // end IIFE
