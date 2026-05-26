@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ECHO — Kimkim.io</title>
+<meta name="description" content="Every Chairman Has One — EDITH-style AI companion for Brilliant Labs Halo AR glasses." />
+<link rel="icon" type="image/png" href="/favicon.png" />
+<link rel="apple-touch-icon" href="/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Pretendard:wght@400;500;700;900&family=JetBrains+Mono:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+
+<!-- background -->
+<div class="bg-grid"></div>
+<div class="bg-gradient"></div>
+<div class="bg-noise"></div>
+
+<!-- nav (partial) -->
+<nav class="nav nav-placeholder" id="navHost" data-partial="/partials/nav.html"></nav>
+
+<main class="deep-dive">
+
+  <a href="/" class="deep-back">← <span data-i18n="deep.back">홈으로</span></a>
+
+  <!-- hero -->
+  <header class="deep-hero">
+    <div class="deep-caption" data-i18n="echo.caption">MAJOR PROJECT · IN DEVELOPMENT · HARDWARE INCOMING</div>
+    <h1 class="deep-title">ECHO</h1>
+    <p class="deep-subtitle" data-i18n="echo.subtitle">Every Chairman Has One. AR 글래스 위의 EDITH 스타일 AI 동반자.</p>
+    <div class="deep-meta">
+      <span class="deep-status-badge deep-status-progress">IN DEVELOPMENT</span>
+      <span class="deep-status-badge deep-status-planning">HARDWARE INCOMING</span>
+      <span class="deep-year">since 2026</span>
+    </div>
+    <div class="deep-hero-visual">
+      <div class="deep-visual-placeholder">
+        <span class="deep-visual-emoji">🥽</span>
+        <span class="deep-visual-label">Image coming soon</span>
+      </div>
+    </div>
+  </header>
+
+  <!-- overview -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">OVERVIEW</div>
+    <p class="deep-prose" data-i18n="echo.overview">Brilliant Labs Halo AR 글래스를 위한 EDITH 스타일 AI 에이전트. 시야 안의 사람과 환경을 이해하고, 음성으로 대화하며, 필요한 정보를 HUD에 띄워주는 컴퓨팅 인터페이스의 다음 형태. 안경 도착 대기 중이며 noa-playground 시뮬레이터로 SDK 개발 진행.</p>
+  </section>
+
+  <!-- why -->
+  <section class="deep-section deep-why">
+    <div class="deep-section-eyebrow">WHY I'M BUILDING THIS</div>
+    <p class="deep-prose deep-prose-large" data-i18n="echo.why">기존 음성 어시스턴트는 시야 맥락을 모른다. EDITH가 피터 파커한테 준 그 경험 — 시야 안에서 정보가 뜨고 음성으로 명령하는 — 이 다음 컴퓨팅 인터페이스라고 본다. Orion이 JARVIS 같은 데스크탑 prototype이었다면 ECHO는 wearable, 즉 EDITH로의 진화.</p>
+  </section>
+
+  <!-- key features -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">KEY PLANNED FEATURES</div>
+    <ul class="deep-feature-list">
+      <li data-i18n="echo.feature1">Halo HUD에 컨텍스트 정보 표시</li>
+      <li data-i18n="echo.feature2">Halo 카메라로 시야 객체 인식 → Claude Vision 연계</li>
+      <li data-i18n="echo.feature3">Halo 본 컨덕션 스피커로 음성 응답</li>
+      <li data-i18n="echo.feature4">Orion 백엔드 재활용 (이미 검증된 코드)</li>
+    </ul>
+  </section>
+
+  <!-- stack -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">STACK</div>
+    <div class="deep-stack">
+      <span>Brilliant Labs Halo SDK</span>
+      <span>Python</span>
+      <span>Claude API</span>
+      <span>ElevenLabs TTS</span>
+      <span>noa-playground</span>
+    </div>
+  </section>
+
+  <!-- timeline -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">PROGRESS LOG</div>
+    <ol class="deep-timeline">
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026 Q2</div>
+        <div class="deep-timeline-what" data-i18n="echo.timeline1">IPD 측정 (셀프 55.3 → 검안 64mm, Halo 호환 범위 58-72mm 안)</div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026 Q2</div>
+        <div class="deep-timeline-what" data-i18n="echo.timeline2">Halo $349 주문 완료, 배송 대기</div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">2026 Q2</div>
+        <div class="deep-timeline-what" data-i18n="echo.timeline3">noa-playground 시뮬레이터로 SDK 학습 시작</div>
+      </li>
+      <li class="deep-timeline-item">
+        <div class="deep-timeline-when">Now</div>
+        <div class="deep-timeline-what" data-i18n="echo.timeline4">Orion 코드 리팩토링 (입출력 레이어 분리해서 글래스 어댑터 끼우기 쉽게)</div>
+      </li>
+    </ol>
+  </section>
+
+  <!-- what's next -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">CURRENT CHALLENGES · WHAT'S NEXT</div>
+    <ul class="deep-feature-list">
+      <li data-i18n="echo.next1">Halo 도착 후 첫 시퀀스 영상 (270K 채널)</li>
+      <li data-i18n="echo.next2">Halo SDK Python/Flutter/Lua 중 결정</li>
+      <li data-i18n="echo.next3">HUD 레이아웃 설계 (IPD 64mm 기준)</li>
+      <li data-i18n="echo.next4">글래스 ↔ 데스크탑 Orion cross-device handoff</li>
+    </ul>
+  </section>
+
+  <!-- links -->
+  <section class="deep-section">
+    <div class="deep-section-eyebrow">LINKS</div>
+    <ul class="deep-links">
+      <li><a href="https://brilliant.xyz/products/halo" target="_blank" rel="noopener">Brilliant Labs Halo ↗</a></li>
+    </ul>
+  </section>
+
+  <!-- back to home (foot) -->
+  <div class="deep-back-foot">
+    <a href="/" class="deep-back-btn">← <span data-i18n="deep.back">홈으로</span></a>
+  </div>
+
+</main>
+
+<!-- footer (partial) -->
+<footer class="footer footer-placeholder" id="footerHost" data-partial="/partials/footer.html"></footer>
+
+<script src="/main.js"></script>
+</body>
+</html>

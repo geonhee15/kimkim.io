@@ -45,7 +45,7 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.card, .major-card, .impact-card, .beyond-card, .section-header, .about-grid, .contact-title').forEach(el => {
+document.querySelectorAll('.card, .major-card, .impact-card, .beyond-card, .deep-section, .section-header, .about-grid, .contact-title').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity .8s ease, transform .8s cubic-bezier(.2,.7,.3,1)';
@@ -196,6 +196,25 @@ const I18N = {
     'contact.mailPlaceholder': '이메일은 잠시 후 공개',
     'footer.tag': 'Built with curiosity · since whenever',
     'footer.copy': '© 2026 Kim Geonhee. 뭐든지 만들고 있음.',
+    // deep-dive shared
+    'deep.back': '홈으로',
+    // ECHO page
+    'echo.caption': 'MAJOR PROJECT · IN DEVELOPMENT · HARDWARE INCOMING',
+    'echo.subtitle': 'Every Chairman Has One. AR 글래스 위의 EDITH 스타일 AI 동반자.',
+    'echo.overview': 'Brilliant Labs Halo AR 글래스를 위한 EDITH 스타일 AI 에이전트. 시야 안의 사람과 환경을 이해하고, 음성으로 대화하며, 필요한 정보를 HUD에 띄워주는 컴퓨팅 인터페이스의 다음 형태. 안경 도착 대기 중이며 noa-playground 시뮬레이터로 SDK 개발 진행.',
+    'echo.why': '기존 음성 어시스턴트는 시야 맥락을 모른다. EDITH가 피터 파커한테 준 그 경험 — 시야 안에서 정보가 뜨고 음성으로 명령하는 — 이 다음 컴퓨팅 인터페이스라고 본다. Orion이 JARVIS 같은 데스크탑 prototype이었다면 ECHO는 wearable, 즉 EDITH로의 진화.',
+    'echo.feature1': 'Halo HUD에 컨텍스트 정보 표시',
+    'echo.feature2': 'Halo 카메라로 시야 객체 인식 → Claude Vision 연계',
+    'echo.feature3': 'Halo 본 컨덕션 스피커로 음성 응답',
+    'echo.feature4': 'Orion 백엔드 재활용 (이미 검증된 코드)',
+    'echo.timeline1': 'IPD 측정 (셀프 55.3 → 검안 64mm, Halo 호환 범위 58-72mm 안)',
+    'echo.timeline2': 'Halo $349 주문 완료, 배송 대기',
+    'echo.timeline3': 'noa-playground 시뮬레이터로 SDK 학습 시작',
+    'echo.timeline4': 'Orion 코드 리팩토링 (입출력 레이어 분리해서 글래스 어댑터 끼우기 쉽게)',
+    'echo.next1': 'Halo 도착 후 첫 시퀀스 영상 (270K 채널)',
+    'echo.next2': 'Halo SDK Python/Flutter/Lua 중 결정',
+    'echo.next3': 'HUD 레이아웃 설계 (IPD 64mm 기준)',
+    'echo.next4': '글래스 ↔ 데스크탑 Orion cross-device handoff',
   },
   en: {
     'nav.works': 'Works',
@@ -281,6 +300,25 @@ const I18N = {
     'contact.mailPlaceholder': 'Email coming soon',
     'footer.tag': 'Built with curiosity · since whenever',
     'footer.copy': '© 2026 Kim Geonhee. Always building.',
+    // deep-dive shared
+    'deep.back': 'Back to home',
+    // ECHO page
+    'echo.caption': 'MAJOR PROJECT · IN DEVELOPMENT · HARDWARE INCOMING',
+    'echo.subtitle': 'Every Chairman Has One — EDITH-style AI companion for AR glasses.',
+    'echo.overview': 'EDITH-style AI agent for Brilliant Labs Halo AR glasses. Designed to understand the wearer\'s visual context, converse via voice, and surface information through the HUD — a prototype for the next computing interface. Currently developing against the noa-playground simulator while awaiting hardware delivery.',
+    'echo.why': 'Existing voice assistants don\'t see what you see. EDITH gave Peter Parker the experience I think is the next computing interface — information surfacing in your field of view, commands by voice. If Orion was the JARVIS-style desktop prototype, ECHO is the wearable evolution — EDITH.',
+    'echo.feature1': 'Surface contextual information on the Halo HUD',
+    'echo.feature2': 'Use Halo\'s camera to recognize objects in view → pipe to Claude Vision',
+    'echo.feature3': 'Voice responses via Halo\'s bone-conduction speakers',
+    'echo.feature4': 'Reuse the Orion backend (already-validated code)',
+    'echo.timeline1': 'IPD measurement (self 55.3 → optometrist 64mm, within Halo\'s 58-72mm range)',
+    'echo.timeline2': 'Halo $349 order placed, awaiting shipment',
+    'echo.timeline3': 'Started learning the SDK against the noa-playground simulator',
+    'echo.timeline4': 'Refactoring Orion code (separating I/O layers so a glasses adapter slots in)',
+    'echo.next1': 'First post-arrival sequence on the 270K channel',
+    'echo.next2': 'Pick Halo SDK target — Python / Flutter / Lua',
+    'echo.next3': 'Design HUD layout (anchored on 64mm IPD)',
+    'echo.next4': 'Glasses ↔ desktop-Orion cross-device handoff',
   },
   ja: {
     'nav.works': 'Works',
