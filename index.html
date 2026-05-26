@@ -439,9 +439,12 @@
       </div>
     </article>
 
-    <article class="beyond-card">
+    <article class="beyond-card beyond-card-clickable" data-modal-trigger="cube" tabindex="0" role="button" aria-label="Play speedcubing winner videos">
       <div class="beyond-emoji">🟦</div>
       <div class="beyond-stat">KCA</div>
+      <div class="beyond-play-indicator" aria-hidden="true">
+        <svg viewBox="0 0 24 24" width="13" height="13" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+      </div>
       <h3 class="beyond-title" data-i18n="beyond.cube.title">Speedcubing</h3>
       <p class="beyond-tagline" data-i18n="beyond.cube.tagline">Korea Cube Association 공식 입상.</p>
       <p class="beyond-desc" data-i18n="beyond.cube.desc">3×3, 2×2 종목. 손가락 빠르고 머리 빠르면 OK.</p>
@@ -514,6 +517,27 @@
     © 2026 Kim Geonhee. 뭐든지 만들고 있음.
   </div>
 </footer>
+
+<!-- cube modal -->
+<div class="cube-modal" id="cubeModal" role="dialog" aria-modal="true" aria-labelledby="cubeModalTitle" hidden>
+  <div class="cube-modal-backdrop" data-close></div>
+  <div class="cube-modal-container">
+    <button class="cube-modal-close" type="button" aria-label="Close" data-close>
+      <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M6 18L18 6"/></svg>
+    </button>
+    <div class="cube-modal-header">
+      <div class="cube-modal-caption" data-i18n="cube.modal.caption">KOREA CUBE ASSOCIATION · 14TH JJANGSAEM</div>
+      <h2 class="cube-modal-title" id="cubeModalTitle" data-i18n="cube.modal.title">공인 대회 우승</h2>
+    </div>
+    <div class="cube-modal-tabs" role="tablist" aria-label="Cube events">
+      <button type="button" class="cube-modal-tab is-active" role="tab" aria-selected="true" data-event="3x3" data-i18n="cube.tab.3x3">3×3 · 1st</button>
+      <button type="button" class="cube-modal-tab" role="tab" aria-selected="false" data-event="2x2" data-i18n="cube.tab.2x2">2×2 · 1st</button>
+    </div>
+    <div class="cube-modal-player">
+      <video class="cube-modal-video" controls preload="metadata" playsinline></video>
+    </div>
+  </div>
+</div>
 
 <script src="main.js"></script>
 </body>

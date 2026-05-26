@@ -148,6 +148,10 @@ const I18N = {
     'beyond.cube.title': 'Speedcubing',
     'beyond.cube.tagline': 'Korea Cube Association 공식 입상.',
     'beyond.cube.desc': '3×3, 2×2 종목. 손가락 빠르고 머리 빠르면 OK.',
+    'cube.modal.caption': 'KOREA CUBE ASSOCIATION · 14TH JJANGSAEM',
+    'cube.modal.title': '공인 대회 우승',
+    'cube.tab.3x3': '3×3 · 1st',
+    'cube.tab.2x2': '2×2 · 1st',
     'card.echo': 'Halo 스마트 글래스에 올라가는 AI 에이전트. 시야에 들어오는 모든 걸 이해하는 동반자.',
     'card.easymac': '맥 사용을 더 쉽게. 밝기, 입력 컨트롤부터 시선 추적까지 한곳에서.',
     'card.kimsrhythm': '손가락이 춤추게 만드는 리듬 게임. 김씨 스타일로.',
@@ -229,6 +233,10 @@ const I18N = {
     'beyond.cube.title': 'Speedcubing',
     'beyond.cube.tagline': 'Korea Cube Association winner.',
     'beyond.cube.desc': '3×3 and 2×2. Fast fingers, fast head, and you\'re good.',
+    'cube.modal.caption': 'KOREA CUBE ASSOCIATION · 14TH JJANGSAEM',
+    'cube.modal.title': 'Sanctioned win',
+    'cube.tab.3x3': '3×3 · 1st',
+    'cube.tab.2x2': '2×2 · 1st',
     'card.echo': 'An AI agent that lives on Halo smart glasses. A companion that understands everything in your view.',
     'card.easymac': 'Making Mac easier — brightness, input controls, and eye tracking all in one place.',
     'card.kimsrhythm': 'A rhythm game that makes your fingers dance. Kim-style.',
@@ -295,6 +303,10 @@ const I18N = {
     'contact.mailPlaceholder': 'メールは近日公開',
     'footer.tag': 'Built with curiosity · since whenever',
     'footer.copy': '© 2026 Kim Geonhee. いつも何かを作ってます。',
+    'cube.modal.caption': 'KOREA CUBE ASSOCIATION · 14TH JJANGSAEM',
+    'cube.modal.title': '公認大会優勝',
+    'cube.tab.3x3': '3×3 · 1st',
+    'cube.tab.2x2': '2×2 · 1st',
   },
 };
 
@@ -359,5 +371,94 @@ if (langSwitcher && langBtn && langMenu) {
   });
   document.addEventListener('keydown', e => {
     if (e.key === 'Escape') closeMenu();
+  });
+}
+
+// ===== cube modal (Speedcubing video player) =====
+const cubeModal = document.getElementById('cubeModal');
+const cubeTrigger = document.querySelector('[data-modal-trigger="cube"]');
+if (cubeModal && cubeTrigger) {
+  const video = cubeModal.querySelector('.cube-modal-video');
+  const tabs = [...cubeModal.querySelectorAll('.cube-modal-tab')];
+  const closeBtns = [...cubeModal.querySelectorAll('[data-close]')];
+  const VIDEO_SRC = {
+    '3x3': '/assets/videos/cube-3x3-winner.mp4',
+    '2x2': '/assets/videos/cube-2x2-winner.mp4',
+  };
+  let lastFocused = null;
+  let trapHandler = null;
+
+  const setTab = (eventKey, { swap = true } = {}) => {
+    tabs.forEach(t => {
+      const active = t.dataset.event === eventKey;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', String(active));
+    });
+    if (!swap) return;
+    // cross-fade swap: pause current, fade out, change src, fade in
+    video.classList.add('is-swapping');
+    setTimeout(() => {
+      try { video.pause(); } catch (e) {}
+      video.currentTime = 0;
+      video.src = VIDEO_SRC[eventKey];
+      video.load();
+      video.classList.remove('is-swapping');
+    }, 150);
+  };
+
+  const openModal = () => {
+    lastFocused = document.activeElement;
+    cubeModal.classList.remove('is-closing');
+    cubeModal.hidden = false;
+    document.body.classList.add('cube-modal-open');
+    // initial tab: 3x3
+    setTab('3x3', { swap: false });
+    video.src = VIDEO_SRC['3x3'];
+    video.load();
+    // focus trap
+    const focusable = cubeModal.querySelectorAll('button, [tabindex]:not([tabindex="-1"]), video');
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    requestAnimationFrame(() => first?.focus());
+    trapHandler = (e) => {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    };
+    cubeModal.addEventListener('keydown', trapHandler);
+  };
+
+  const closeModal = () => {
+    cubeModal.classList.add('is-closing');
+    try { video.pause(); } catch (e) {}
+    if (trapHandler) cubeModal.removeEventListener('keydown', trapHandler);
+    setTimeout(() => {
+      cubeModal.hidden = true;
+      cubeModal.classList.remove('is-closing');
+      document.body.classList.remove('cube-modal-open');
+      video.removeAttribute('src');
+      video.load();
+      lastFocused?.focus?.();
+    }, 180);
+  };
+
+  // open: click + Enter/Space
+  cubeTrigger.addEventListener('click', openModal);
+  cubeTrigger.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); openModal(); }
+  });
+
+  // tabs
+  tabs.forEach(t => t.addEventListener('click', () => setTab(t.dataset.event)));
+
+  // close: X / backdrop / ESC
+  closeBtns.forEach(b => b.addEventListener('click', closeModal));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !cubeModal.hidden) closeModal();
+  });
+
+  // video error logging (no UI noise, just warn for debug)
+  video.addEventListener('error', () => {
+    console.warn('[cube-modal] video failed to load:', video.currentSrc || video.src);
   });
 }
