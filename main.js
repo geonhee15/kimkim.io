@@ -25,7 +25,7 @@ const io = new IntersectionObserver(entries => {
   });
 }, { threshold: 0.12 });
 
-document.querySelectorAll('.card, .section-header, .about-grid, .contact-title').forEach(el => {
+document.querySelectorAll('.card, .major-card, .impact-card, .beyond-card, .section-header, .about-grid, .contact-title').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(24px)';
   el.style.transition = 'opacity .8s ease, transform .8s cubic-bezier(.2,.7,.3,1)';
@@ -105,6 +105,49 @@ const I18N = {
     'works.sub': '머리에 떠오를 때마다 하나씩.',
     'works.filter': '체험 가능한 것들만 보기',
     'works.moreSoon': '또 만들 거임',
+    // Impact metrics
+    'impact.eyebrow': 'BY THE NUMBERS',
+    'impact.title': '숫자로 보면.',
+    'impact.youtube.label': 'YouTube 구독자',
+    'impact.youtube.meta': 'since 2019',
+    'impact.projects.label': '출시한 프로젝트',
+    'impact.projects.meta': '5+ 년의 빌드 기록',
+    'impact.vulns.label': '발견한 취약점',
+    'impact.vulns.meta': '친구 사이트 풀 보안 감사',
+    'impact.cube.label': 'KCA 공식 입상',
+    'impact.cube.meta': '3×3 · 2×2 큐브',
+    'impact.years.label': '스스로 만든 시간',
+    'impact.years.meta': '아이디어 → 코드 → 출시',
+    // Major projects section
+    'major.eyebrow': 'MAJOR PROJECTS',
+    'major.title': '깊게 파고 있는 네 가지.',
+    'major.sub': '각 프로젝트는 별도 페이지에서 자세히.',
+    'major.deepdive': 'Deep dive',
+    'major.echo.tagline': 'Every Chairman Has One — JARVIS를 진짜로 만드는 중.',
+    'major.echo.desc': 'Brilliant Labs Halo AR 안경에서 돌아가는 AI 에이전트. 시야 안에서 동작하는 다음 컴퓨팅 인터페이스.',
+    'major.orion.tagline': 'V1 → C2+ 아홉 번의 iteration.',
+    'major.orion.desc': '맥에서 돌아가는 멀티모달 데스크탑 AI. 음성·제스처·얼굴 인식 + 캘린더·웹 자동화 통합.',
+    'major.cyber.tagline': '15 vulnerabilities · 28-page bilingual report · responsible disclosure.',
+    'major.cyber.desc': '학교 친구 사이트 풀 감사 + OWASP / TryHackMe 훈련 + educational botnet simulator.',
+    'major.hardware.tagline': 'Iron Man 리펄서, 계산기 속 라즈베리파이, 초음파 레이더, 로봇 강아지.',
+    'major.hardware.desc': 'Arduino · Raspberry Pi · 3D 모델링까지. 머릿속 아이디어를 손으로 만드는 작업장.',
+    // Experiments header
+    'experiments.eyebrow': 'EXPERIMENTS & GAMES',
+    'experiments.title': '재미로 만든 것들.',
+    'experiments.sub': '주말 빌드, 작은 도구, 게임.',
+    // Content & Beyond
+    'beyond.eyebrow': 'CONTENT & BEYOND',
+    'beyond.title': '코드 바깥의 작업.',
+    'beyond.sub': '카메라, 음악, 그리고 큐브.',
+    'beyond.youtube.title': 'YouTube',
+    'beyond.youtube.tagline': '270,000+ 구독자의 메이커 채널.',
+    'beyond.youtube.desc': '빌드 로그, 튜토리얼, 그리고 작업 일지를 영상으로. 2019년부터 운영.',
+    'beyond.music.title': 'Music Production',
+    'beyond.music.tagline': 'FL Studio로 만든 Brazilian phonk + 일렉트로닉.',
+    'beyond.music.desc': '자작 비트를 위한 자작 트랙. 사운드 디자인부터 믹스까지 직접.',
+    'beyond.cube.title': 'Speedcubing',
+    'beyond.cube.tagline': 'Korea Cube Association 공식 입상.',
+    'beyond.cube.desc': '3×3, 2×2 종목. 손가락 빠르고 머리 빠르면 OK.',
     'card.echo': 'Halo 스마트 글래스에 올라가는 AI 에이전트. 시야에 들어오는 모든 걸 이해하는 동반자.',
     'card.easymac': '맥 사용을 더 쉽게. 밝기, 입력 컨트롤부터 시선 추적까지 한곳에서.',
     'card.kimsrhythm': '손가락이 춤추게 만드는 리듬 게임. 김씨 스타일로.',
@@ -147,6 +190,45 @@ const I18N = {
     'works.sub': 'One at a time, as they come to mind.',
     'works.filter': 'Show only playable ones',
     'works.moreSoon': 'More coming',
+    'impact.eyebrow': 'BY THE NUMBERS',
+    'impact.title': 'In numbers.',
+    'impact.youtube.label': 'YouTube subscribers',
+    'impact.youtube.meta': 'since 2019',
+    'impact.projects.label': 'Shipped projects',
+    'impact.projects.meta': '5+ years of building',
+    'impact.vulns.label': 'Vulnerabilities found',
+    'impact.vulns.meta': 'full audit on a peer site',
+    'impact.cube.label': 'KCA competition winner',
+    'impact.cube.meta': '3×3 · 2×2 cube',
+    'impact.years.label': 'Years self-directed',
+    'impact.years.meta': 'idea → code → ship',
+    'major.eyebrow': 'MAJOR PROJECTS',
+    'major.title': 'Four I\'m going deep on.',
+    'major.sub': 'Each one has its own deep-dive page.',
+    'major.deepdive': 'Deep dive',
+    'major.echo.tagline': 'Every Chairman Has One — building JARVIS, for real.',
+    'major.echo.desc': 'AI agent on Brilliant Labs Halo AR glasses. The next computing interface, running inside your field of view.',
+    'major.orion.tagline': 'Nine iterations from V1 to C2+.',
+    'major.orion.desc': 'Multimodal desktop AI on macOS — voice, gestures, face recognition + calendar and web automation integrated.',
+    'major.cyber.tagline': '15 vulnerabilities · 28-page bilingual report · responsible disclosure.',
+    'major.cyber.desc': 'Full security audit of a peer\'s site + OWASP / TryHackMe training + an educational botnet simulator.',
+    'major.hardware.tagline': 'Iron Man Repulsor, RPi inside a calculator, ultrasonic radar, robot dog.',
+    'major.hardware.desc': 'Arduino, Raspberry Pi, and 3D modeling. The workshop where ideas in my head become things in my hand.',
+    'experiments.eyebrow': 'EXPERIMENTS & GAMES',
+    'experiments.title': 'Built for fun.',
+    'experiments.sub': 'Weekend builds, tiny tools, games.',
+    'beyond.eyebrow': 'CONTENT & BEYOND',
+    'beyond.title': 'Work beyond code.',
+    'beyond.sub': 'Camera, music, and the cube.',
+    'beyond.youtube.title': 'YouTube',
+    'beyond.youtube.tagline': 'A maker channel with 270,000+ subscribers.',
+    'beyond.youtube.desc': 'Build logs, tutorials, and worklogs on video. Running since 2019.',
+    'beyond.music.title': 'Music Production',
+    'beyond.music.tagline': 'Brazilian phonk and electronic in FL Studio.',
+    'beyond.music.desc': 'Original beats for original work. Sound design through mix, all hands-on.',
+    'beyond.cube.title': 'Speedcubing',
+    'beyond.cube.tagline': 'Korea Cube Association winner.',
+    'beyond.cube.desc': '3×3 and 2×2. Fast fingers, fast head, and you\'re good.',
     'card.echo': 'An AI agent that lives on Halo smart glasses. A companion that understands everything in your view.',
     'card.easymac': 'Making Mac easier — brightness, input controls, and eye tracking all in one place.',
     'card.kimsrhythm': 'A rhythm game that makes your fingers dance. Kim-style.',
@@ -222,10 +304,12 @@ const STORAGE_KEY = 'kimkim-lang';
 function applyLang(lang) {
   if (!I18N[lang]) lang = 'ko';
   const dict = I18N[lang];
+  const fallback = I18N.ko;
   document.documentElement.lang = lang;
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
-    if (dict[key] !== undefined) el.innerHTML = dict[key];
+    const value = dict[key] !== undefined ? dict[key] : fallback[key];
+    if (value !== undefined) el.innerHTML = value;
   });
   // update switcher label
   const cur = document.querySelector('.lang-current');
