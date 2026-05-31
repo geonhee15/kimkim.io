@@ -172,11 +172,31 @@ const I18N = {
     'beyond.cube.desc': '3×3, 2×2 종목. 손가락 빠르고 머리 빠르면 OK. 2-3학년 때 친구들에게 1:1 큐브 튜토리얼 멘토링도 했다.',
     'beyond.recognition.title': '외부 검증',
     'beyond.recognition.tagline': '밖에서 확인된 것들.',
-    'beyond.recognition.item1': 'YouTube Silver Play Button (실물 trophy, 30만 채널 달성)',
-    'beyond.recognition.item2': 'Python Coding Pro 자격증 (3급)',
-    'beyond.recognition.item3': 'AMC 8 응시 (3년 일찍, 만 11세)',
-    'beyond.recognition.item4': 'KIMTMC 팀 리더 (Korea International MS Team Math Competition)',
-    'beyond.recognition.item5': 'Minecraft Club 학생 주도 창립 (Chadwick International)',
+    'beyond.recognition.group.academic': 'EXTERNAL ACADEMIC',
+    'beyond.recognition.group.leadership': 'SCHOOL LEADERSHIP',
+    'beyond.recognition.group.reach': 'AUDIENCE & REACH',
+    'beyond.recognition.cty.title': 'CTY 그랜드 아너스 · SET Math',
+    'beyond.recognition.cty.sub': 'Quantitative · Highest identification level',
+    'beyond.recognition.cty.courses': 'CTY 완료 코스: Numbers Zero To Infinity (NUMR · Dec 2023) · The Physics of Engineering (SCEN · Mar 2025)',
+    'beyond.recognition.python': 'Python Coding Pro 자격증 (Level 3)',
+    'beyond.recognition.amc8': 'AMC 8 응시 (3년 일찍, 만 11세)',
+    'beyond.recognition.kimtmc': 'KIMTMC 팀 리더 (Korea International MS Team Math Competition)',
+    'beyond.recognition.minecraft': 'Minecraft Club 학생 주도 창립 (Chadwick International)',
+    'beyond.recognition.elemGrad': '초등 졸업식 준비 — 팀 리더 (영상 편집, 스크립트, MC)',
+    'beyond.recognition.eolDoc': '영어 EOL 다큐멘터리 프로젝트 — 팀 리더 (자료 조사, 영상 편집, 스토리보드)',
+    'beyond.recognition.mentor5th': '5학년 졸업식 멘토링 (영상 편집 지원, 스크립트 가이드, 기술 지원)',
+    'beyond.recognition.silver': 'YouTube Silver Play Button (실물 trophy, 30만 채널)',
+    // Editing Studio - Official School Work cards
+    'editing.school.chuseok.title': '추석 공식 기념 영상',
+    'editing.school.chuseok.sub': 'Chadwick International',
+    'editing.school.musical.title': '중학교 뮤지컬 공식 홍보 영상',
+    'editing.school.musical.sub': '×2 비디오',
+    'editing.school.graduation.title': '초등학교 졸업 셀러브레이션',
+    'editing.school.graduation.sub': '×4 비디오',
+    'editing.school.eolDoc.title': '영어 EOL 다큐멘터리 프로젝트',
+    'editing.school.eolDoc.sub': '팀 리더 · 자료 조사 · 영상 편집 · 스토리보드',
+    'editing.school.section': 'OFFICIAL SCHOOL WORK',
+    'editing.school.playLabel': '재생',
     'cube.modal.caption': 'KOREA CUBE ASSOCIATION · 14TH JJANGSAEM',
     'cube.modal.title': '공인 대회 우승',
     'cube.tab.3x3': '3×3 · 1st',
@@ -405,11 +425,31 @@ const I18N = {
     'beyond.cube.desc': '3×3 and 2×2. Fast fingers, fast head, and you\'re good. Also mentored peers 1-on-1 with cube tutorials in grades 2-3.',
     'beyond.recognition.title': 'Recognition',
     'beyond.recognition.tagline': 'Verified from the outside.',
-    'beyond.recognition.item1': 'YouTube Silver Play Button (physical trophy at 300K)',
-    'beyond.recognition.item2': 'Python Coding Pro Certification (Level 3)',
-    'beyond.recognition.item3': 'AMC 8 (taken 3 years early, age 11)',
-    'beyond.recognition.item4': 'KIMTMC team leader (Korea International MS Team Math Competition)',
-    'beyond.recognition.item5': 'Founder, student-led Minecraft Club at Chadwick International',
+    'beyond.recognition.group.academic': 'EXTERNAL ACADEMIC',
+    'beyond.recognition.group.leadership': 'SCHOOL LEADERSHIP',
+    'beyond.recognition.group.reach': 'AUDIENCE & REACH',
+    'beyond.recognition.cty.title': 'CTY Grand Honors · SET Math',
+    'beyond.recognition.cty.sub': 'Quantitative · Highest identification level',
+    'beyond.recognition.cty.courses': 'CTY Completed: Numbers Zero To Infinity (NUMR · Dec 2023) · The Physics of Engineering (SCEN · Mar 2025)',
+    'beyond.recognition.python': 'Python Coding Pro Certification (Level 3)',
+    'beyond.recognition.amc8': 'AMC 8 (taken 3 years early, age 11)',
+    'beyond.recognition.kimtmc': 'KIMTMC team leader (Korea International MS Team Math Competition)',
+    'beyond.recognition.minecraft': 'Co-founder, student-led Minecraft Club at Chadwick International',
+    'beyond.recognition.elemGrad': 'Elementary Graduation Ceremony Prep — Team Lead (video, scripting, MC)',
+    'beyond.recognition.eolDoc': 'English EOL Documentary Project — Team Lead (research, editing, storyboard)',
+    'beyond.recognition.mentor5th': 'Mentored 5th graders for graduation ceremony (editing support, scripting, technical assistance)',
+    'beyond.recognition.silver': 'YouTube Silver Play Button (physical trophy, 300K channel)',
+    // Editing Studio - Official School Work cards
+    'editing.school.chuseok.title': 'Chuseok Commemorative Video',
+    'editing.school.chuseok.sub': 'Chadwick International',
+    'editing.school.musical.title': 'Middle School Musical Promo',
+    'editing.school.musical.sub': '×2 videos',
+    'editing.school.graduation.title': 'Elementary Graduation Celebration',
+    'editing.school.graduation.sub': '×4 videos',
+    'editing.school.eolDoc.title': 'English EOL Documentary Project',
+    'editing.school.eolDoc.sub': 'Team lead · Research · Video editing · Storyboard',
+    'editing.school.section': 'OFFICIAL SCHOOL WORK',
+    'editing.school.playLabel': 'Play',
     'cube.modal.caption': 'KOREA CUBE ASSOCIATION · 14TH JJANGSAEM',
     'cube.modal.title': 'Sanctioned win',
     'cube.tab.3x3': '3×3 · 1st',
@@ -786,6 +826,153 @@ if (cubeModal && cubeTrigger) {
   // video error logging (no UI noise, just warn for debug)
   video.addEventListener('error', () => {
     console.warn('[cube-modal] video failed to load:', video.currentSrc || video.src);
+  });
+}
+
+// ===== general video modal (Editing Studio · Official School Work) =====
+const videoModal = document.getElementById('videoModal');
+const videoTriggers = document.querySelectorAll('.deep-subcard-video[data-video-set]');
+if (videoModal && videoTriggers.length) {
+  const isLocalDev2 = ['localhost', '127.0.0.1', '0.0.0.0'].includes(location.hostname);
+  const VBASE = isLocalDev2 ? '/assets/videos/' : 'https://videos.kimkim.io/';
+  const VSETS = {
+    chuseok: {
+      i18nTitle: 'editing.school.chuseok.title',
+      caption: 'OFFICIAL SCHOOL WORK · CHADWICK INTERNATIONAL',
+      videos: [{ label: 'Chuseok 2024', file: 'chuseok-2024.mp4' }],
+    },
+    musical: {
+      i18nTitle: 'editing.school.musical.title',
+      caption: 'OFFICIAL SCHOOL WORK · MIDDLE SCHOOL MUSICAL',
+      videos: [
+        { label: 'Musical · 1', file: 'musical-1.mp4' },
+        { label: 'Musical · 2', file: 'musical-2.mp4' },
+      ],
+    },
+    graduation: {
+      i18nTitle: 'editing.school.graduation.title',
+      caption: 'OFFICIAL SCHOOL WORK · ELEMENTARY GRADUATION',
+      videos: [
+        { label: 'Graduation · 1', file: 'graduation-1.mp4' },
+        { label: 'Graduation · 2', file: 'graduation-2.mp4' },
+        { label: 'Graduation · 3', file: 'graduation-3.mp4' },
+        { label: 'Graduation · 4', file: 'graduation-4.mp4' },
+      ],
+    },
+    eolDoc: {
+      i18nTitle: 'editing.school.eolDoc.title',
+      caption: 'OFFICIAL SCHOOL WORK · ENGLISH EOL DOCUMENTARY',
+      videos: [{ label: 'EOL Documentary', file: 'en-documentary.mp4' }],
+    },
+  };
+
+  const vmCaption = videoModal.querySelector('.video-modal-caption');
+  const vmTitle = videoModal.querySelector('.video-modal-title');
+  const vmTabs = videoModal.querySelector('.video-modal-tabs');
+  const vmVideo = videoModal.querySelector('.video-modal-video');
+  const vmCloseBtns = [...videoModal.querySelectorAll('[data-close]')];
+  let vmLastFocused = null;
+  let vmTrapHandler = null;
+  let vmCurrentSet = null;
+
+  const swapVideo = (file) => {
+    vmVideo.classList.add('is-swapping');
+    setTimeout(() => {
+      try { vmVideo.pause(); } catch (e) {}
+      vmVideo.currentTime = 0;
+      vmVideo.src = VBASE + file;
+      vmVideo.load();
+      vmVideo.classList.remove('is-swapping');
+    }, 150);
+  };
+
+  const setActiveTab = (idx) => {
+    [...vmTabs.querySelectorAll('.video-modal-tab')].forEach((t, i) => {
+      const active = i === idx;
+      t.classList.toggle('is-active', active);
+      t.setAttribute('aria-selected', String(active));
+    });
+  };
+
+  const renderTabs = (set) => {
+    vmTabs.innerHTML = '';
+    if (set.videos.length <= 1) return; // hide tabs when only one video
+    set.videos.forEach((v, idx) => {
+      const btn = document.createElement('button');
+      btn.type = 'button';
+      btn.className = 'video-modal-tab' + (idx === 0 ? ' is-active' : '');
+      btn.setAttribute('role', 'tab');
+      btn.setAttribute('aria-selected', idx === 0 ? 'true' : 'false');
+      btn.textContent = v.label;
+      btn.addEventListener('click', () => {
+        setActiveTab(idx);
+        swapVideo(v.file);
+      });
+      vmTabs.appendChild(btn);
+    });
+  };
+
+  const resolveI18nText = (key, fallback) => {
+    const lang = document.documentElement.lang || 'ko';
+    const dict = (typeof I18N !== 'undefined' && I18N[lang]) || (typeof I18N !== 'undefined' && I18N.ko) || {};
+    return dict[key] !== undefined ? dict[key] : fallback;
+  };
+
+  const openVideoModal = (setKey, triggerEl) => {
+    const set = VSETS[setKey];
+    if (!set) return;
+    vmCurrentSet = set;
+    vmLastFocused = triggerEl || document.activeElement;
+    // populate header
+    vmCaption.textContent = set.caption;
+    vmTitle.textContent = resolveI18nText(set.i18nTitle, set.caption);
+    renderTabs(set);
+    // load first video (no animation swap on open)
+    try { vmVideo.pause(); } catch (e) {}
+    vmVideo.currentTime = 0;
+    vmVideo.src = VBASE + set.videos[0].file;
+    vmVideo.load();
+    // show
+    videoModal.classList.remove('is-closing');
+    videoModal.hidden = false;
+    document.body.classList.add('video-modal-open');
+    // focus trap
+    const focusable = videoModal.querySelectorAll('button, [tabindex]:not([tabindex="-1"]), video');
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    requestAnimationFrame(() => first?.focus());
+    vmTrapHandler = (e) => {
+      if (e.key !== 'Tab') return;
+      if (e.shiftKey && document.activeElement === first) { e.preventDefault(); last.focus(); }
+      else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
+    };
+    videoModal.addEventListener('keydown', vmTrapHandler);
+  };
+
+  const closeVideoModal = () => {
+    videoModal.classList.add('is-closing');
+    try { vmVideo.pause(); } catch (e) {}
+    if (vmTrapHandler) videoModal.removeEventListener('keydown', vmTrapHandler);
+    setTimeout(() => {
+      videoModal.hidden = true;
+      videoModal.classList.remove('is-closing');
+      document.body.classList.remove('video-modal-open');
+      vmVideo.removeAttribute('src');
+      vmVideo.load();
+      vmLastFocused?.focus?.();
+    }, 180);
+  };
+
+  videoTriggers.forEach((btn) => {
+    btn.addEventListener('click', () => openVideoModal(btn.dataset.videoSet, btn));
+  });
+  vmCloseBtns.forEach((b) => b.addEventListener('click', closeVideoModal));
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !videoModal.hidden) closeVideoModal();
+  });
+
+  vmVideo.addEventListener('error', () => {
+    console.warn('[video-modal] failed to load:', vmVideo.currentSrc || vmVideo.src);
   });
 }
 
