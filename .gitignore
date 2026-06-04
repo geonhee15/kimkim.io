@@ -6,3 +6,10 @@ node_modules/
 # Move to Cloudflare R2 / Stream and update src in main.js (VIDEO_SRC).
 assets/videos/*.mp4
 
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
