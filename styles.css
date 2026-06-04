@@ -456,6 +456,102 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
 @media (max-width: 1100px) {
   .major-grid { grid-template-columns: repeat(2, 1fr); }
 }
+
+/* ===== 6-section IA grids ===== */
+.ia-section { padding: 80px 0; }
+.ia-section .section-header { margin-bottom: 50px; }
+.ia-section .section-eyebrow {
+  display: inline-flex; align-items: baseline; gap: 10px;
+}
+.ia-section .section-num {
+  font-family: 'JetBrains Mono', monospace;
+  color: #71717a;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+}
+
+.flagship-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 22px;
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 40px;
+}
+.engineering-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 18px;
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 40px;
+}
+.visualsound-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 40px;
+}
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 40px;
+}
+.games-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 14px;
+  max-width: 1400px; margin: 0 auto;
+  padding: 0 40px;
+}
+
+/* small-card variant for tools/games (compact .card) */
+.tools-grid .card,
+.games-grid .card {
+  padding: 24px;
+  border-radius: 18px;
+}
+.tools-grid .card-emoji,
+.games-grid .card-emoji {
+  font-size: 36px;
+  margin-bottom: 16px;
+}
+.tools-grid .card-title,
+.games-grid .card-title { font-size: 22px; }
+.tools-grid .card-desc,
+.games-grid .card-desc { font-size: 13.5px; margin-bottom: 16px; }
+
+/* external-link card variant (sciencebox) — small ↗ in corner */
+.major-card .major-card-extra-link {
+  margin-top: 16px;
+  padding-top: 16px;
+  border-top: 1px dashed rgba(255,255,255,0.08);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 11px;
+  color: #71717a;
+  display: flex; align-items: center; gap: 6px;
+}
+.major-card .major-card-extra-link a {
+  color: #a1a1aa;
+  text-decoration: none;
+  transition: color .2s;
+}
+.major-card .major-card-extra-link a:hover { color: #c4b5fd; }
+
+@media (max-width: 1100px) {
+  .flagship-grid { grid-template-columns: 1fr; }
+  .engineering-grid { grid-template-columns: repeat(2, 1fr); }
+  .tools-grid { grid-template-columns: repeat(2, 1fr); }
+  .games-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .flagship-grid,
+  .engineering-grid,
+  .tools-grid { grid-template-columns: 1fr; padding: 0 24px; }
+  .games-grid { grid-template-columns: repeat(2, 1fr); padding: 0 24px; }
+  .visualsound-grid { padding: 0 24px; }
+  .ia-section { padding: 60px 0; }
+}
 .major-card {
   position: relative;
   display: flex;

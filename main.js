@@ -52,6 +52,20 @@ document.querySelectorAll('.card, .major-card, .impact-card, .beyond-card, .deep
   io.observe(el);
 });
 
+// data-href cards (non-anchor cards that should open in new tab — avoids nested-anchor HTML errors)
+document.querySelectorAll('[data-href]').forEach(card => {
+  card.style.cursor = 'pointer';
+  const open = (e) => {
+    // ignore clicks that originated from a real inner anchor
+    if (e.target.closest('a')) return;
+    window.open(card.dataset.href, '_blank', 'noopener');
+  };
+  card.addEventListener('click', open);
+  card.addEventListener('keydown', (e) => {
+    if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); window.open(card.dataset.href, '_blank', 'noopener'); }
+  });
+});
+
 // filter: 체험 가능한 것들만 보기
 const filterBtn = document.querySelector('.filter-toggle');
 const worksGrid = document.querySelector('.grid');
@@ -125,6 +139,19 @@ const I18N = {
     'works.sub': '머리에 떠오를 때마다 하나씩.',
     'works.filter': '체험 가능한 것들만 보기',
     'works.moreSoon': '또 만들 거임',
+    // === 6-section IA headers ===
+    'section.flagship.title': '지금 가장 매달리고 있는 것 — 다음 컴퓨팅 인터페이스를 만드는 중.',
+    'section.engineering.title': '깊이 있는 연구가 필요한 영역들.',
+    'section.visualSound.title': '픽셀과 주파수, 둘 다 직접 자른다.',
+    'section.tools.title': '내가 매일 쓰려고 만든 작은 도구들.',
+    'section.games.title': '재미와 호기심으로 만든 것들.',
+    'section.beyond.title': '코딩 바깥에서 한 일들.',
+    // === new cards ===
+    'card.notifyclaude.desc': 'Claude Code 작업 끝나거나 질문할 때 맥에 알림 띄워주는 도구. Hooks 시스템 활용.',
+    'card.sciencebox.desc': '브라우저에서 돌아가는 단일 HTML 과학 샌드박스. 강체·화학(주기율표 1-50번)·1D 슈뢰딩거 양자역학까지 한 파일에. FFT랑 split-step Fourier 직접 구현.',
+    'major.sciencebox.tagline': '단일 HTML 파일에 물리·화학·양자역학.',
+    'major.sciencebox.desc': '강체 시뮬레이션 + 주기율표 1-50번 화학 + 1D 슈뢰딩거 양자역학. FFT와 split-step Fourier 직접 구현, 의존성 0.',
+    'major.openExternal': 'Live demo',
     // Impact metrics
     'impact.eyebrow': 'BY THE NUMBERS',
     'impact.title': '숫자로 보면.',
@@ -384,6 +411,19 @@ const I18N = {
     'works.sub': 'One at a time, as they come to mind.',
     'works.filter': 'Show only playable ones',
     'works.moreSoon': 'More coming',
+    // === 6-section IA headers ===
+    'section.flagship.title': 'What I\'m building right now — the next computing interface.',
+    'section.engineering.title': 'Where I go deeper — research-leaning work.',
+    'section.visualSound.title': 'Cutting pixels and frequencies — both by hand.',
+    'section.tools.title': 'Small tools I made to use every day.',
+    'section.games.title': 'Built for fun and curiosity.',
+    'section.beyond.title': 'What I do outside of code.',
+    // === new cards ===
+    'card.notifyclaude.desc': 'macOS notifier for Claude Code — pops up on work completion or questions. Uses Claude Code Hook system, with osascript fallback.',
+    'card.sciencebox.desc': 'Single-file browser physics sandbox. Rigid bodies, chemistry (periodic table 1-50), and 1D Schrödinger quantum mode all in one HTML. FFT (Cooley-Tukey) and split-step Fourier implemented from scratch.',
+    'major.sciencebox.tagline': 'Physics, chemistry, and quantum mechanics in one HTML file.',
+    'major.sciencebox.desc': 'Rigid-body simulation + periodic table 1-50 chemistry + 1D Schrödinger quantum mode. FFT and split-step Fourier implemented from scratch, zero dependencies.',
+    'major.openExternal': 'Live demo',
     'impact.eyebrow': 'BY THE NUMBERS',
     'impact.title': 'In numbers.',
     'impact.youtube.label': 'YouTube subscribers',

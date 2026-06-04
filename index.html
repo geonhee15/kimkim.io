@@ -118,14 +118,15 @@
   </div>
 </section>
 
-<!-- major projects -->
-<section class="major" id="major">
+<!-- ============================================
+     SECTION 1 — FLAGSHIP
+     ============================================ -->
+<section class="ia-section" id="flagship">
   <header class="section-header">
-    <div class="section-eyebrow" data-i18n="major.eyebrow">MAJOR PROJECTS</div>
-    <h2 class="section-title" data-i18n="major.title">깊게 파고 있는 네 가지.</h2>
-    <p class="section-sub" data-i18n="major.sub">각 프로젝트는 별도 페이지에서 자세히.</p>
+    <div class="section-eyebrow"><span class="section-num">01 —</span> FLAGSHIP</div>
+    <h2 class="section-title" data-i18n="section.flagship.title">지금 가장 매달리고 있는 것 — 다음 컴퓨팅 인터페이스를 만드는 중.</h2>
   </header>
-  <div class="major-grid">
+  <div class="flagship-grid">
     <a href="/works/echo/" class="major-card">
       <div class="major-card-emoji">🥽</div>
       <div class="major-card-meta">
@@ -159,7 +160,18 @@
         <span data-i18n="major.deepdive">Deep dive</span> <span class="arrow">→</span>
       </div>
     </a>
+  </div>
+</section>
 
+<!-- ============================================
+     SECTION 2 — ENGINEERING & RESEARCH
+     ============================================ -->
+<section class="ia-section" id="engineering">
+  <header class="section-header">
+    <div class="section-eyebrow"><span class="section-num">02 —</span> ENGINEERING & RESEARCH</div>
+    <h2 class="section-title" data-i18n="section.engineering.title">깊이 있는 연구가 필요한 영역들.</h2>
+  </header>
+  <div class="engineering-grid">
     <a href="/works/cybersecurity/" class="major-card">
       <div class="major-card-emoji">🛡️</div>
       <div class="major-card-meta">
@@ -194,6 +206,37 @@
       </div>
     </a>
 
+    <div class="major-card" role="link" tabindex="0" data-href="https://sciencebox.kimkim.io" aria-label="Open sciencebox live demo">
+      <div class="major-card-emoji">⚛️</div>
+      <div class="major-card-meta">
+        <span class="tag tag-shipped">SHIPPED</span>
+        <span class="major-card-year">since 2026</span>
+      </div>
+      <h3 class="major-card-title">sciencebox</h3>
+      <p class="major-card-tagline" data-i18n="major.sciencebox.tagline">단일 HTML 파일에 물리·화학·양자역학.</p>
+      <p class="major-card-desc" data-i18n="major.sciencebox.desc">강체 시뮬레이션 + 주기율표 1-50번 화학 + 1D 슈뢰딩거 양자역학. FFT와 split-step Fourier 직접 구현, 의존성 0.</p>
+      <div class="major-card-stack">
+        <span>Vanilla JS</span><span>HTML5 Canvas</span><span>0 dependencies</span>
+      </div>
+      <div class="major-card-cta">
+        <span data-i18n="major.openExternal">Live demo</span> <span class="arrow">↗</span>
+      </div>
+      <div class="major-card-extra-link">
+        <span>code:</span><a href="https://github.com/geonhee15/sciencebox" target="_blank" rel="noopener">github.com/geonhee15/sciencebox ↗</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 3 — VISUAL & SOUND
+     ============================================ -->
+<section class="ia-section" id="visual-sound">
+  <header class="section-header">
+    <div class="section-eyebrow"><span class="section-num">03 —</span> VISUAL & SOUND</div>
+    <h2 class="section-title" data-i18n="section.visualSound.title">픽셀과 주파수, 둘 다 직접 자른다.</h2>
+  </header>
+  <div class="visualsound-grid">
     <a href="/works/editing-studio/" class="major-card">
       <div class="major-card-emoji">🎬</div>
       <div class="major-card-meta">
@@ -213,47 +256,29 @@
   </div>
 </section>
 
-<!-- experiments & games -->
-<section class="works" id="works">
+<!-- ============================================
+     SECTION 4 — TOOLS & UTILITIES
+     ============================================ -->
+<section class="ia-section" id="tools">
   <header class="section-header">
-    <div class="section-eyebrow" data-i18n="experiments.eyebrow">EXPERIMENTS & GAMES</div>
-    <h2 class="section-title" data-i18n="experiments.title">재미로 만든 것들.</h2>
-    <p class="section-sub" data-i18n="experiments.sub">주말 빌드, 작은 도구, 게임.</p>
-    <button class="filter-toggle" type="button" aria-pressed="false">
-      <span class="filter-dot" aria-hidden="true"></span>
-      <span class="filter-label" data-i18n="works.filter">체험 가능한 것들만 보기</span>
-    </button>
+    <div class="section-eyebrow"><span class="section-num">04 —</span> TOOLS & UTILITIES</div>
+    <h2 class="section-title" data-i18n="section.tools.title">내가 매일 쓰려고 만든 작은 도구들.</h2>
   </header>
 
-  <div class="grid">
-    <a href="https://connecthalast.vercel.app/" target="_blank" rel="noopener" class="card" data-playable="true">
-      <div class="card-emoji">🔗</div>
+  <div class="tools-grid">
+    <a href="https://github.com/geonhee15/Notify_Claude" target="_blank" rel="noopener" class="card">
+      <div class="card-emoji">🔔</div>
       <div class="card-meta">
         <span class="tag tag-shipped">SHIPPED</span>
         <span class="card-year">since 2026</span>
       </div>
-      <h3 class="card-title">ConnecThaLast</h3>
-      <span class="card-url">connecthalast.vercel.app ↗</span>
-      <p class="card-desc" data-i18n="card.connecthalast">끝말잇기 게임. 단어 끊기면 패배.</p>
+      <h3 class="card-title">Notify_Claude</h3>
+      <span class="card-url">github.com/geonhee15/Notify_Claude ↗</span>
+      <p class="card-desc" data-i18n="card.notifyclaude.desc">Claude Code 작업 끝나거나 질문할 때 맥에 알림 띄워주는 도구. Hooks 시스템 활용.</p>
       <div class="card-stack">
-        <span>Next.js</span><span>Vercel</span><span>Korean dictionary validation</span>
+        <span>Bash</span><span>macOS</span><span>Claude Code Hooks</span>
       </div>
     </a>
-
-    <a href="https://tryonme.kimkim.io/" target="_blank" rel="noopener" class="card" data-playable="true">
-      <div class="card-emoji">👕</div>
-      <div class="card-meta">
-        <span class="tag tag-shipped">SHIPPED</span>
-        <span class="card-year">since 2026</span>
-      </div>
-      <h3 class="card-title">Try On Me</h3>
-      <span class="card-url">tryonme.kimkim.io ↗</span>
-      <p class="card-desc" data-i18n="card.tryonme">사진 한 장 올리고 실제 브랜드 제품을 골라 그대로 입어보는 가상 피팅. 프롬프트 말고 카탈로그.</p>
-      <div class="card-stack">
-        <span>FASHN AI API</span><span>Cloudflare Workers</span><span>Catalog mapping</span>
-      </div>
-    </a>
-
     <a href="https://kimnews.kimkim.io/" target="_blank" rel="noopener" class="card" data-playable="true">
       <div class="card-emoji">📰</div>
       <div class="card-meta">
@@ -281,16 +306,57 @@
       </div>
     </a>
 
-    <a href="#" class="card">
-      <div class="card-emoji">🎵</div>
+    <a href="https://github.com/geonhee15/dockfolders" target="_blank" rel="noopener" class="card" data-playable="true">
+      <div class="card-emoji">📁</div>
       <div class="card-meta">
-        <span class="tag">ARCHIVED</span>
+        <span class="tag tag-shipped">SHIPPED</span>
         <span class="card-year">since 2026</span>
       </div>
-      <h3 class="card-title">Kim's Rhythm</h3>
-      <p class="card-desc" data-i18n="card.kimsrhythm">손가락이 춤추게 만드는 리듬 게임. 김씨 스타일로.</p>
+      <h3 class="card-title">DockFolders</h3>
+      <span class="card-url">github.com/geonhee15/dockfolders ↗</span>
+      <p class="card-desc" data-i18n="card.dockfolders">맥 독을 폴더처럼 정리. 자주 쓰는 앱들을 카테고리별로 묶어 한 칸에 깔끔하게.</p>
       <div class="card-stack">
-        <span>Web Audio API</span><span>Canvas</span><span>Custom beat detection</span>
+        <span>macOS shell</span><span>Dock plist manipulation</span>
+      </div>
+    </a>
+
+    <a href="https://tryonme.kimkim.io/" target="_blank" rel="noopener" class="card" data-playable="true">
+      <div class="card-emoji">👕</div>
+      <div class="card-meta">
+        <span class="tag tag-shipped">SHIPPED</span>
+        <span class="card-year">since 2026</span>
+      </div>
+      <h3 class="card-title">Try On Me</h3>
+      <span class="card-url">tryonme.kimkim.io ↗</span>
+      <p class="card-desc" data-i18n="card.tryonme">사진 한 장 올리고 실제 브랜드 제품을 골라 그대로 입어보는 가상 피팅. 프롬프트 말고 카탈로그.</p>
+      <div class="card-stack">
+        <span>FASHN AI API</span><span>Cloudflare Workers</span><span>Catalog mapping</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- ============================================
+     SECTION 5 — GAMES & PLAYFUL EXPERIMENTS
+     ============================================ -->
+<section class="ia-section" id="games">
+  <header class="section-header">
+    <div class="section-eyebrow"><span class="section-num">05 —</span> GAMES & PLAYFUL EXPERIMENTS</div>
+    <h2 class="section-title" data-i18n="section.games.title">재미와 호기심으로 만든 것들.</h2>
+  </header>
+
+  <div class="games-grid">
+    <a href="https://connecthalast.vercel.app/" target="_blank" rel="noopener" class="card" data-playable="true">
+      <div class="card-emoji">🔗</div>
+      <div class="card-meta">
+        <span class="tag tag-shipped">SHIPPED</span>
+        <span class="card-year">since 2026</span>
+      </div>
+      <h3 class="card-title">ConnecThaLast</h3>
+      <span class="card-url">connecthalast.vercel.app ↗</span>
+      <p class="card-desc" data-i18n="card.connecthalast">끝말잇기 게임. 단어 끊기면 패배.</p>
+      <div class="card-stack">
+        <span>Next.js</span><span>Vercel</span><span>Korean dictionary validation</span>
       </div>
     </a>
 
@@ -308,6 +374,19 @@
       </div>
     </a>
 
+    <a href="#" class="card">
+      <div class="card-emoji">🎵</div>
+      <div class="card-meta">
+        <span class="tag">ARCHIVED</span>
+        <span class="card-year">since 2026</span>
+      </div>
+      <h3 class="card-title">Kim's Rhythm</h3>
+      <p class="card-desc" data-i18n="card.kimsrhythm">손가락이 춤추게 만드는 리듬 게임. 김씨 스타일로.</p>
+      <div class="card-stack">
+        <span>Web Audio API</span><span>Canvas</span><span>Custom beat detection</span>
+      </div>
+    </a>
+
     <a href="https://handy.kimkim.io/" target="_blank" rel="noopener" class="card" data-playable="true">
       <div class="card-emoji">✋</div>
       <div class="card-meta">
@@ -319,46 +398,6 @@
       <p class="card-desc" data-i18n="card.handy">웹캠으로 손을 추적해서 그림 그리고, 퐁 치고, 피아노까지 친다.</p>
       <div class="card-stack">
         <span>YOHA</span><span>TensorFlow.js</span><span>WebGL</span><span>3 game modes</span>
-      </div>
-    </a>
-
-    <a href="#" class="card">
-      <div class="card-emoji">🌌</div>
-      <div class="card-meta">
-        <span class="tag">ARCHIVED</span>
-        <span class="card-year">since 2026</span>
-      </div>
-      <h3 class="card-title">GeonSpace</h3>
-      <p class="card-desc" data-i18n="card.geonspace">건희만의 공간. 깃허브 스타일로 꾸민 개인 프로필 페이지. 지금은 kimkim.io로 대체됨.</p>
-      <div class="card-stack">
-        <span>HTML</span><span>CSS</span><span>JS (vanilla, intentional)</span>
-      </div>
-    </a>
-
-    <a href="https://github.com/geonhee15/dockfolders" target="_blank" rel="noopener" class="card" data-playable="true">
-      <div class="card-emoji">📁</div>
-      <div class="card-meta">
-        <span class="tag tag-shipped">SHIPPED</span>
-        <span class="card-year">since 2026</span>
-      </div>
-      <h3 class="card-title">DockFolders</h3>
-      <span class="card-url">github.com/geonhee15/dockfolders ↗</span>
-      <p class="card-desc" data-i18n="card.dockfolders">맥 독을 폴더처럼 정리. 자주 쓰는 앱들을 카테고리별로 묶어 한 칸에 깔끔하게.</p>
-      <div class="card-stack">
-        <span>macOS shell</span><span>Dock plist manipulation</span>
-      </div>
-    </a>
-
-    <a href="#" class="card">
-      <div class="card-emoji">🌍</div>
-      <div class="card-meta">
-        <span class="tag">ARCHIVED</span>
-        <span class="card-year">since 2026</span>
-      </div>
-      <h3 class="card-title">WorldSimul</h3>
-      <p class="card-desc" data-i18n="card.worldsimul">파이썬으로 짠 복셀 월드 시뮬레이터. 청크 단위로 쌓이는 세계, OpenGL로 직접 굴린다.</p>
-      <div class="card-stack">
-        <span>Python</span><span>OpenGL</span><span>Pygame</span><span>Chunk loading</span>
       </div>
     </a>
 
@@ -388,6 +427,32 @@
         <span>Chrome Extension API</span><span>JS</span><span>Local storage</span>
       </div>
     </a>
+
+    <a href="#" class="card">
+      <div class="card-emoji">🌍</div>
+      <div class="card-meta">
+        <span class="tag">ARCHIVED</span>
+        <span class="card-year">since 2026</span>
+      </div>
+      <h3 class="card-title">WorldSimul</h3>
+      <p class="card-desc" data-i18n="card.worldsimul">파이썬으로 짠 복셀 월드 시뮬레이터. 청크 단위로 쌓이는 세계, OpenGL로 직접 굴린다.</p>
+      <div class="card-stack">
+        <span>Python</span><span>OpenGL</span><span>Pygame</span><span>Chunk loading</span>
+      </div>
+    </a>
+
+    <a href="#" class="card">
+      <div class="card-emoji">🌌</div>
+      <div class="card-meta">
+        <span class="tag">ARCHIVED</span>
+        <span class="card-year">since 2026</span>
+      </div>
+      <h3 class="card-title">GeonSpace</h3>
+      <p class="card-desc" data-i18n="card.geonspace">건희만의 공간. 깃허브 스타일로 꾸민 개인 프로필 페이지. 지금은 kimkim.io로 대체됨.</p>
+      <div class="card-stack">
+        <span>HTML</span><span>CSS</span><span>JS (vanilla, intentional)</span>
+      </div>
+    </a>
   </div>
 
   <div class="more-soon">
@@ -395,12 +460,13 @@
   </div>
 </section>
 
-<!-- content & beyond -->
-<section class="beyond" id="beyond">
+<!-- ============================================
+     SECTION 6 — BEYOND CODE
+     ============================================ -->
+<section class="beyond ia-section" id="beyond">
   <header class="section-header">
-    <div class="section-eyebrow" data-i18n="beyond.eyebrow">CONTENT & BEYOND</div>
-    <h2 class="section-title" data-i18n="beyond.title">코드 바깥의 작업.</h2>
-    <p class="section-sub" data-i18n="beyond.sub">카메라, 음악, 그리고 큐브.</p>
+    <div class="section-eyebrow"><span class="section-num">06 —</span> BEYOND CODE</div>
+    <h2 class="section-title" data-i18n="section.beyond.title">코딩 바깥에서 한 일들.</h2>
   </header>
   <div class="beyond-grid">
     <a href="https://www.youtube.com/@원소15" target="_blank" rel="noopener" class="beyond-card beyond-card-link">
