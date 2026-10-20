@@ -470,6 +470,10 @@ button { font: inherit; cursor: pointer; border: none; background: none; color: 
   letter-spacing: 0.18em;
 }
 
+/* full-row variant inside flagship (Omni OS hub card) */
+.major-card-wide { grid-column: 1 / -1; }
+.major-card-wide .major-card-desc { max-width: 920px; }
+
 .flagship-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);

@@ -32,6 +32,7 @@
     <div class="deep-meta">
       <span class="deep-status-badge deep-status-progress">ONGOING</span>
       <span class="deep-status-badge deep-status-shipped">3 SHIPPED</span>
+      <span class="deep-status-badge deep-status-progress">3 IN PROGRESS</span>
       <span class="deep-status-badge deep-status-planning">2 PLANNING</span>
       <span class="deep-year">since 2024</span>
     </div>
@@ -101,9 +102,51 @@
       </div>
     </div>
 
-    <!-- PLANNING / IN PROGRESS group -->
+    <!-- IN PROGRESS group -->
     <div class="deep-subgrid-group">
-      <div class="deep-subgrid-group-label" data-i18n="hw.planning">PLANNING / IN PROGRESS</div>
+      <div class="deep-subgrid-group-label" data-i18n="hw.inprogress">IN PROGRESS</div>
+      <div class="deep-subgrid">
+        <a href="https://github.com/geonhee15/arc-scan" target="_blank" rel="noopener" class="deep-subcard">
+          <div class="deep-subcard-icon">📡</div>
+          <div class="deep-subcard-meta">
+            <span class="deep-status-badge deep-status-progress">FIRST LIGHT · v1</span>
+          </div>
+          <h3 class="deep-subcard-title" data-i18n="hw.sub.arcscan.title">ARC Scan — ToF 라이다 룸 스캐너</h3>
+          <p class="deep-subcard-desc" data-i18n="hw.sub.arcscan.desc">VL53L1X ToF 센서 7개를 수직 마스트에 각도 분산 장착, 서보로 회전시켜 방 전체를 3D 포인트 클라우드로. ESP32가 WiFi 웹소켓으로 스트리밍, three.js 실시간 렌더. 2026-08-10 FIRST LIGHT 첫 룸 스캔 성공. v2: 스테퍼로 360°.</p>
+          <div class="deep-subcard-stack">
+            <span>ESP32</span><span>VL53L1X ×7</span><span>TCA9548A I2C mux</span><span>MG996R</span><span>WebSocket</span><span>three.js</span><span>OpenSCAD</span>
+          </div>
+        </a>
+
+        <a href="https://github.com/geonhee15/Cold-Gas-Thruster" target="_blank" rel="noopener" class="deep-subcard">
+          <div class="deep-subcard-icon">🚀</div>
+          <div class="deep-subcard-meta">
+            <span class="deep-status-badge deep-status-progress">PHASE 1 · TEST RIG</span>
+          </div>
+          <h3 class="deep-subcard-title" data-i18n="hw.sub.coldgas.title">Cold-Gas Thruster — 손바닥 추진기</h3>
+          <p class="deep-subcard-desc" data-i18n="hw.sub.coldgas.desc">압축공기를 초킹 노즐로 분사해 실제 추력을 내는 리펄서. 이상기체 + 초킹 유동 계산기, ESP32 + HX711 80Hz 추력 측정 리그, 데드맨 스위치. Phase 1: 노즐 3/4/5mm × 압력 3/4/5bar × 펄스 매트릭스로 Cd 실측 중. 예측 ~14 N.</p>
+          <div class="deep-subcard-stack">
+            <span>ESP32</span><span>HX711 load cell</span><span>Solenoid valve</span><span>13ci HPA</span><span>OpenSCAD</span><span>Python calculator</span>
+          </div>
+        </a>
+
+        <a href="https://geonhee15.github.io/Webshooter-V1/" target="_blank" rel="noopener" class="deep-subcard">
+          <div class="deep-subcard-icon">🕸️</div>
+          <div class="deep-subcard-meta">
+            <span class="deep-status-badge deep-status-progress">BATCH A → C</span>
+          </div>
+          <h3 class="deep-subcard-title" data-i18n="hw.sub.webshooter.title">Web Shooter Lab — 웹슈터 배합 실험</h3>
+          <p class="deep-subcard-desc" data-i18n="hw.sub.webshooter.desc">아세톤에 폴리스티렌을 녹여 분사하면 용매 증발로 굳는 "액체→고체" 웹. 송진(부착력) · 고무 본드(유연성)를 한 번에 하나씩 투입하며 매 발사를 기록하는 실험 로그. 슈터 v1 주사기 → v2 손목 마운트 + 고무줄 트리거.</p>
+          <div class="deep-subcard-stack">
+            <span>Acetone + EPS</span><span>Rosin</span><span>Rubber cement</span><span>Dispenser needle</span><span>Lab log (web)</span>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <!-- PLANNING group -->
+    <div class="deep-subgrid-group">
+      <div class="deep-subgrid-group-label" data-i18n="hw.planning">PLANNING</div>
       <div class="deep-subgrid">
         <a href="#" class="deep-subcard">
           <div class="deep-subcard-icon">🖩</div>
@@ -138,6 +181,8 @@
     <ul class="deep-feature-list">
       <li data-i18n="hw.next1">ECHO 케이스 직접 3D 프린트</li>
       <li data-i18n="hw.next2">Repulsor 완성 후 ECHO 글래스와 연동 (시선 방향 + 손동작 인식)</li>
+      <li data-i18n="hw.next3">ARC Scan v2 — 스테퍼로 360° 스캔, 색상 매핑, 배터리 구동, 데모 영상</li>
+      <li data-i18n="hw.next4">Cold-Gas Phase 2 — 실측 Cd 기반 사양 확정, 고압 구성 (레귤레이터 + 고속 밸브)</li>
     </ul>
   </section>
 
